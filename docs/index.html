@@ -1,16 +1,81 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="HelpYourself.games — website coming soon.">
-    <title>HelpYourself.games</title>
-    <link rel="stylesheet" href="assets/styles.css">
-  </head>
-  <body>
-    <main>
-      <h1>HelpYourself.games</h1>
-      <p>Website coming soon.</p>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simple, fun games. No ads, no in-app purchases, and no selling your data. Meet Arrow Strum, Bus Bash, Block Breaker, and Timber Tumble.">
+  <meta name="theme-color" content="#fffdf5">
+  <meta property="og:title" content="Help Yourself — Simple, fun games">
+  <meta property="og:description" content="Simple, fun games. No ads, no in-app purchases, and no selling your data. Meet Arrow Strum, Bus Bash, Block Breaker, and Timber Tumble.">
+  <meta property="og:type" content="website">
+  <title>Help Yourself — Simple, fun games</title>
+  <link rel="stylesheet" href="assets/styles.css?v=1">
+  <link rel="preload" href="assets/fonts/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <script src="assets/site.js?v=1" defer></script>
+</head>
+<body class="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="small-brand" href="./" aria-label="Help Yourself home" aria-hidden="true" tabindex="-1"><img src="assets/brand/help-yourself-wordmark.png" width="692" height="292" alt="Help Yourself"></a>
+      <nav aria-label="Main navigation">
+        <a href="#games">Games</a>
+        <a href="about/">About</a>
+        <a class="support-link" href="support/">Support us <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </nav>
+    </div>
+    <div class="header-rule" aria-hidden="true"><img src="assets/brand/mustard-line.svg" alt=""><img src="assets/brand/mustard-line.svg" alt=""></div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="brand-title">
+      <img class="mascot" src="assets/brand/hot-dog-mascot.png" alt="" width="510" height="775" fetchpriority="high">
+      <h1 id="brand-title"><span class="visually-hidden">Help Yourself</span><img class="wordmark" src="assets/brand/help-yourself-wordmark.png" width="692" height="292" alt="" aria-hidden="true"></h1>
+    </section>
+    <section class="game-list" id="games" aria-labelledby="games-title">
+      <h2 class="visually-hidden" id="games-title">Our games</h2>
+      <article class="game-preview">
+        <a class="game-link" href="games/#arrow-strum">
+          <img class="game-art" src="assets/games/arrow-strum.png" width="512" height="512" alt="">
+          <h3>Arrow Strum</h3>
+        </a>
+        <p>Find your way, one arrow at a time.</p>
+      </article>
+      <article class="game-preview">
+        <a class="game-link" href="games/#bus-bash">
+          <img class="game-art" src="assets/games/bus-bash.png" width="512" height="512" alt="" loading="lazy">
+          <h3>Bus Bash</h3>
+        </a>
+        <p>A little order in the traffic.</p>
+      </article>
+      <article class="game-preview">
+        <a class="game-link" href="games/#block-breaker">
+          <img class="game-art" src="assets/games/block-breaker.png" width="512" height="512" alt="" loading="lazy">
+          <h3>Block Breaker</h3>
+        </a>
+        <p>Slide, match, and clear the way.</p>
+      </article>
+      <article class="game-preview">
+        <a class="game-link" href="games/#timber-tumble">
+          <img class="game-art" src="assets/games/timber-tumble.png" width="512" height="512" alt="" loading="lazy">
+          <h3>Timber Tumble</h3>
+        </a>
+        <p>A puzzle with a few loose screws.</p>
+      </article>
+    </section>
+    <section class="promise" aria-labelledby="promise-title">
+      <h2 id="promise-title"><span class="visually-hidden">Our Promise</span><img src="assets/brand/our-promise.png" alt="" aria-hidden="true" width="260" height="45" loading="lazy"></h2>
+      <p>We will never sell you in-app purchases, sell your data,<br class="desktop-break"> or make you watch ads. We will make simple, fun games.</p>
+      <p>If you like them, you can kick us some money.<br class="desktop-break"> As much or as little as you want, as often as you’d like.</p>
+      <p class="signoff">Eric</p>
+      <a class="button" href="support/">Support the studio <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-rule" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <a href="./" class="footer-copyright">© Help Yourself</a>
+      <nav aria-label="Footer navigation"><a href="mailto:support@helpyourself.games">Contact</a><a href="privacy/">Privacy</a></nav>
+    </div>
+  </footer>
+</body>
 </html>

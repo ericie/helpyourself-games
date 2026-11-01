@@ -1,0 +1,25 @@
+{
+  "providedArchive": "help-yourself-build-assets.zip",
+  "providedAssets": {
+    "docs/assets/brand/hot-dog-mascot.png": "assets/brand/hot-dog-mascot.png",
+    "docs/assets/brand/help-yourself-wordmark.png": "assets/brand/help-yourself-wordmark.png",
+    "docs/assets/brand/our-promise.png": "assets/brand/our-promise.png",
+    "docs/assets/characters/cherry-pie.png": "assets/characters/cherry-pie.png",
+    "docs/assets/brand/mustard-line.svg": "assets/brand/mustard-line.svg (preserveAspectRatio adjusted for layout)"
+  },
+  "existingGameWorkspace": {
+    "docs/assets/games/arrow-strum.png": "apps/arrow_maze/web/icons/Icon-512.png",
+    "docs/assets/games/bus-bash.png": "apps/bus_bash/web/icons/Icon-512.png",
+    "docs/assets/games/block-breaker.png": "apps/tile_shift/web/icons/Icon-512.png",
+    "docs/assets/games/timber-tumble.png": "apps/timber_tumble/web/icons/Icon-512.png"
+  },
+  "fontSources": {
+    "Lato": "https://github.com/google/fonts/tree/main/ofl/lato",
+    "Lilita One": "https://github.com/google/fonts/tree/main/ofl/lilitaone"
+  },
+  "notes": [
+    "Supplied raster assets and game icons are unmodified.",
+    "The original concept game previews, sample signature, original logo, and rectangle-only SVG lettering remain in design/source-assets and are not served by GitHub Pages.",
+    "The user-supplied reference includes three illustrative games; the user explicitly supplied the replacement four-game lineup."
+  ]
+}

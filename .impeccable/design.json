@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01T02:15:51.936052+00:00",
+  "title": "Design System: Help Yourself",
+  "extensions": {
+    "colorMeta": {
+      "mustard": {
+        "role": "primary",
+        "displayName": "Mustard"
+      },
+      "relish": {
+        "role": "secondary",
+        "displayName": "Relish"
+      },
+      "relish-dark": {
+        "role": "secondary",
+        "displayName": "Dark relish"
+      },
+      "ketchup": {
+        "role": "tertiary",
+        "displayName": "Ketchup (defined, unassigned)"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Interior page heading",
+        "purpose": "Fluid Lilita One page introductions."
+      },
+      "title": {
+        "displayName": "Section and preview title",
+        "purpose": "Desktop homepage game titles and prose subheadings."
+      },
+      "body": {
+        "displayName": "Body copy",
+        "purpose": "Lato prose; 17px at the narrow breakpoint."
+      },
+      "label": {
+        "displayName": "Navigation",
+        "purpose": "Desktop header links; smaller on narrow screens."
+      },
+      "button": {
+        "displayName": "Action label",
+        "purpose": "Bold Lato within filled action links."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": "180ms ease-out",
+        "purpose": "Action background-color and compact-brand opacity transitions."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }",
+        "purpose": "Existing user preference override."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "640px"
+      },
+      {
+        "name": "smallest",
+        "value": "360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Filled action link",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Shared support and exploration action; implemented as an anchor.",
+      "html": "<a class=\"ds-button\" href=\"#support\">Support the studio <svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-button{font-family:var(--font-body,Lato,sans-serif);font-size:18px;line-height:1.5;color:var(--color-ink,#232323);display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:48px;padding:11px 23px;border-radius:var(--radius-button,8px);color:var(--color-paper,#fffdf5);background:var(--color-relish,#247327);font-weight:700;text-decoration:none;transition:background-color 180ms ease-out}.ds-button svg{width:1.1em;height:1.1em;flex:none}.ds-button:hover{background:var(--color-relish-dark,#19531c);text-decoration:none}.ds-button:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-button{font-size:17px}}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Main navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Text navigation with underline on hover or the current page.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#games\" aria-current=\"page\">Games</a><a href=\"#about\">About</a><a href=\"#support\">Support us <svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:26px}.ds-nav a{font-family:var(--font-body,Lato,sans-serif);font-size:18px;line-height:1.5;color:var(--color-ink,#232323);display:inline-flex;align-items:center;gap:4px;min-height:44px;font-size:16px;text-decoration:none;text-underline-offset:.22em}.ds-nav svg{width:1.1em;height:1.1em;flex:none}.ds-nav a:hover,.ds-nav a[aria-current=\"page\"]{text-decoration:underline}.ds-nav a:hover{text-decoration-thickness:2px}.ds-nav a:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-nav{gap:17px}.ds-nav a{font-size:15px}}@media(max-width:360px){.ds-nav{gap:12px}.ds-nav a{font-size:14px}}"
+    },
+    {
+      "name": "Text link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Underlined inline link used in prose.",
+      "html": "<a class=\"ds-text-link\" href=\"#contact\">support@helpyourself.games</a>",
+      "css": ".ds-text-link{font-family:var(--font-body,Lato,sans-serif);font-size:18px;line-height:1.5;color:var(--color-ink,#232323);text-decoration:underline;text-underline-offset:.22em}.ds-text-link:hover{text-decoration-thickness:2px}.ds-text-link:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-text-link{font-size:17px}}"
+    },
+    {
+      "name": "Game title link",
+      "kind": "custom",
+      "refersTo": "game-title-link",
+      "description": "Title portion of the homepage preview link; the full implementation also contains the supplied circular game PNG.",
+      "html": "<a class=\"ds-game-link\" href=\"#arrow-strum\"><h3>Arrow Strum</h3></a>",
+      "css": ".ds-game-link{display:inline-block;color:var(--color-ink,#232323);text-decoration:none}.ds-game-link h3{font-family:var(--font-display,\"Lilita One\",sans-serif);font-weight:400;font-size:30px;line-height:1.1;text-wrap:balance;margin:0}.ds-game-link:hover h3{text-decoration:underline;text-underline-offset:.14em}.ds-game-link:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-game-link h3{font-size:29px}}"
+    },
+    {
+      "name": "Skip link",
+      "kind": "custom",
+      "refersTo": "skip-link",
+      "description": "Keyboard-only entry to main content; focus the preview link to reveal it.",
+      "html": "<a class=\"ds-skip-link\" href=\"#main\">Skip to content</a>",
+      "css": ".ds-skip-link{font-family:var(--font-body,Lato,sans-serif);font-size:18px;line-height:1.5;color:var(--color-ink,#232323);position:fixed;top:12px;left:16px;z-index:30;padding:12px 20px;background:var(--color-paper,#fffdf5);transform:translateY(-160%);text-decoration:underline;text-underline-offset:.22em}.ds-skip-link:focus{transform:translateY(0)}.ds-skip-link:hover{text-decoration-thickness:2px}.ds-skip-link:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-skip-link{font-size:17px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Help Yourself",
+    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line PNG wordmark, custom Our Promise lettering, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open, centered, and readable, with playful display type and plain body copy.",
+    "keyCharacteristics": [
+      "Supplied mascot and lettering assets.",
+      "Warm ivory canvas, charcoal text, mustard separators, and relish actions.",
+      "Circular game artwork and generous vertical spacing.",
+      "Self-hosted Lato and Lilita One.",
+      "Flat surfaces with visible keyboard focus."
+    ],
+    "rules": [],
+    "dos": [
+      "Do reuse the supplied mascot, wordmark, Our Promise lettering, and mustard-line assets.",
+      "Do use self-hosted Lato for copy and Lilita One for ordinary headings.",
+      "Do preserve circular game artwork, open spacing, and the shared paper canvas.",
+      "Do retain visible keyboard focus, current-page navigation, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't replace custom lettering with a typed approximation.",
+      "Don't introduce shadows, bordered game cards, or a fictional input library as existing patterns.",
+      "Don't present the generated sample signature as authentic handwriting.",
+      "Don't substitute the concept's illustrative game placeholders for the confirmed games' real icons."
+    ]
+  }
+}
