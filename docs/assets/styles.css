@@ -101,6 +101,8 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .interior { width: min(var(--width-site), calc(100% - 64px)); min-height: calc(100svh - 170px); margin: 0 auto; padding: 156px 0 44px; }
 .page-intro { margin: 0 auto 64px; max-width: var(--width-copy); text-align: center; }
 .page-intro h1 { font-size: clamp(38px, 5vw, 60px); margin: 0 0 16px; }
+.page-intro h1.lettered-heading { font-family: var(--font-body); line-height: 1; }
+.heading-art { height: clamp(42px, 5vw, 60px); width: auto; max-width: 100%; object-fit: contain; margin-inline: auto; }
 .page-intro p { font-size: 22px; margin-bottom: 0; }
 .prose { max-width: var(--width-copy); margin-inline: auto; }
 .prose h2 { font-size: 30px; margin: 44px 0 16px; }

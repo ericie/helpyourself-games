@@ -21,5 +21,22 @@
     "Supplied raster assets and game icons are unmodified.",
     "The original concept game previews, sample signature, original logo, and rectangle-only SVG lettering remain in design/source-assets and are not served by GitHub Pages.",
     "The user-supplied reference includes three illustrative games; the user explicitly supplied the replacement four-game lineup."
-  ]
+  ],
+  "generatedLettering": {
+    "source": "design/generated/heading-lettering-sheet.png",
+    "prompt": "design/generated/heading-lettering-sheet.prompt.txt",
+    "reference": "design/source-assets/reference/homepage-approved-concept.png",
+    "method": "Native image generation, then monochrome path tracing with design/trace-lettering.py (vtracer 0.6.12). No embedded raster or font text in the SVGs.",
+    "assets": [
+      "docs/assets/headings/our-games.svg",
+      "docs/assets/headings/a-little-more-play.svg",
+      "docs/assets/headings/help-us-keep-playing.svg",
+      "docs/assets/headings/your-time-is-for-playing.svg",
+      "docs/assets/headings/page-not-found.svg"
+    ]
+  },
+  "repairedVectors": {
+    "docs/assets/brand/help-yourself-wordmark.svg": "Traced from the provided help-yourself-wordmark.png alpha channel; preserves original lettering.",
+    "docs/assets/brand/our-promise.svg": "Traced from the provided our-promise.png alpha channel; preserves original lettering."
+  }
 }

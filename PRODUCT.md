@@ -20,6 +20,8 @@ Game store URLs and the support payment destination are not yet supplied. Do not
 ## Brand Commitments
 Use the user-supplied asset pack and homepage reference. Preserve the hot-dog mascot, custom Help Yourself lettering, mustard separators, single-column game lineup, and supplied Our Promise copy.
 
+Page H1 headings use custom SVG path artwork matching the approved lettering, with real HTML text retained for accessibility. Do not replace this lettering with a live display font.
+
 ## Evidence on Hand
 - User-supplied help-yourself-build-assets.zip, retained assets under design/source-assets and docs/assets.
 - Homepage reference: design/source-assets/reference/homepage-approved-concept.png.

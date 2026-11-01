@@ -10,10 +10,10 @@ colors:
   relish-dark: "#19531c"
 typography:
   display:
-    fontFamily: '"Lilita One", sans-serif'
+    fontFamily: "Lato, sans-serif"
     fontSize: "clamp(38px, 5vw, 60px)"
     fontWeight: 400
-    lineHeight: 1.1
+    lineHeight: 1
   title:
     fontFamily: '"Lilita One", sans-serif'
     fontSize: "30px"
@@ -75,10 +75,10 @@ components:
 
 This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).
 
-The hot-dog mascot, supplied two-line PNG wordmark, custom Our Promise lettering, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open, centered, and readable, with playful display type and plain body copy.
+The hot-dog mascot, supplied two-line wordmark and Our Promise lettering preserved as traced SVG paths, generated page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open, centered, and readable, with playful display type and plain body copy.
 
 **Key Characteristics:**
-- Supplied mascot and lettering assets.
+- Supplied mascot and lettering, with custom SVG path artwork for visible H1s.
 - Warm ivory canvas, charcoal text, mustard separators, and relish actions.
 - Circular game artwork and generous vertical spacing.
 - Self-hosted Lato and Lilita One.
@@ -104,13 +104,15 @@ The frontmatter preserves the existing CSS palette; no additional shades are spe
 
 ## Typography
 
-**Display Font:** Lilita One, with sans-serif fallback. **Body Font:** Lato, with sans-serif fallback. Both are self-hosted under `docs/assets/fonts`; Lato has regular and bold files, and Lilita One uses its regular file. Font synthesis is disabled.
+**Visible H1 lettering:** SVG path artwork. The user explicitly rejected a live font for page H1s. **H2/H3 Font:** Lilita One, with sans-serif fallback. **Body Font:** Lato, with sans-serif fallback. Both fonts are self-hosted under `docs/assets/fonts`; Lato has regular and bold files, and Lilita One uses its regular file. Font synthesis is disabled in the shared stylesheet.
 
-The custom wordmark and Our Promise heading remain image assets, with accessible text in HTML. Lilita One supplies the rounded weight of ordinary headings. Lato supplies readable prose, navigation, and bold action labels; Eric's signoff is ordinary Lato text.
+All visible H1s use actual SVG paths, with no embedded bitmap or SVG text. The home wordmark, compact header wordmark, and Our Promise artwork are traced from the alpha channels of the original supplied PNGs, preserving their lettering. Four interior H1s use artwork generated in `design/generated/heading-lettering-sheet.png` and traced into `docs/assets/headings/`: Our games, A little more play., Help us keep playing., and Your time is for playing. The standalone 404 heading uses the generated Page not found. artwork as inline paths. Sources and tracing provenance are recorded in [the asset manifest](design/asset-sources.json).
 
-The frontmatter records the desktop roles. Interior page headings use the fluid display size; home game titles and prose subheadings use the title role. Game-detail headings are larger (36px). Introductory paragraphs use larger Lato (22px), while promise copy is fluid (`clamp(19px, 2.5vw, 24px)`, line-height 1.4). Home game summaries use 19px. Footer text is 15px.
+Each H1 keeps its actual words in a visually hidden HTML span. Decorative artwork is `aria-hidden="true"`; external images also use empty alt text. The interior H1's Lato font and fluid font-size in the frontmatter's display role apply to hidden/fallback text, not the visible lettering. Its line-height is 1. The artwork has height `clamp(42px, 5vw, 60px)`, automatic width, maximum width 100%, `object-fit: contain`, and centered inline margins. The independent 404 uses the same height clamp and width limit for its inline SVG, with system-ui for its surrounding text.
 
-At the narrow breakpoint, body type becomes 17px, navigation 15px, home game titles 29px, game-detail headings 32px, game summaries 17px, intro and promise paragraphs 20px, and footer text 14px. Navigation becomes 14px at the smallest breakpoint. Headings use balanced wrapping; paragraphs use pretty wrapping where supported.
+The other frontmatter roles describe live text. Home game titles and prose subheadings use the title role; game-detail H2s are larger (36px). Introductory paragraphs use larger Lato (22px), while promise copy is fluid (`clamp(19px, 2.5vw, 24px)`, line-height 1.4). Home game summaries use 19px. Footer text is 15px. Eric's signoff remains ordinary Lato text.
+
+At the narrow breakpoint, body type becomes 17px, navigation 15px, home game titles 29px, game-detail headings 32px, game summaries 17px, intro and promise paragraphs 20px, and footer text 14px. Navigation becomes 14px at the smallest breakpoint. Live headings use balanced wrapping; paragraphs use pretty wrapping where supported.
 
 ## Layout
 
@@ -142,11 +144,15 @@ Ordinary links inherit text color, remain underlined, and use a 0.22em underline
 
 ### Game preview
 
-The artwork and title are one link, followed by a separate summary. The artwork is 230px square at desktop and 220px at the narrow breakpoint. Hover underlines the title at a 0.14em offset; keyboard focus outlines the whole link. The sidecar demonstrates the title-link portion without substituting invented artwork for the real game PNGs.
+The artwork and title are one link, followed by a separate summary. The artwork is 230px square at desktop and 220px at the narrow breakpoint. Hover underlines the title at a 0.14em offset; keyboard focus outlines the whole link. The sidecar demonstrates the title-link portion without substituting invented artwork for the real game PNGs. Both home previews and game details show **Coming Soon** for all four games until release links are supplied; this is bold dark-relish text, not a disabled purchase button.
+
+### Lettered page heading
+
+Use the traced page-specific SVG inside a semantic H1 alongside visually hidden real text. The artwork is decorative to assistive technology; it does not replace the accessible name. Keep its proportions and the shared height clamp described under Typography. The home H1 uses the traced supplied wordmark instead of the generated interior-heading sheet. Our Promise uses the same accessible image pattern in an H2. The README contains the developer markup example.
 
 ### Brand header and decorative separators
 
-The supplied compact wordmark links home. On the homepage it is hidden from view, keyboard navigation, and assistive technology until the large hero has scrolled away. Its opacity transition is 180ms ease-out. Interior pages show it immediately. The mustard-line SVG repeats across full-width, 24px-tall header and footer separators. Each separator uses one continuous background, with matching tile endpoint heights and tangents for smooth joins. The mascot sits above the header rule.
+The compact wordmark uses the traced supplied SVG and links home. On the homepage it is hidden from view, keyboard navigation, and assistive technology until the large hero has scrolled away. Its opacity transition is 180ms ease-out. Interior pages show it immediately. The mustard-line SVG repeats across full-width, 24px-tall header and footer separators. Each separator uses one continuous background, with matching tile endpoint heights and tangents for smooth joins. The mascot sits above the header rule.
 
 ### Skip link and motion
 
@@ -156,12 +162,12 @@ The skip link is fixed above the viewport until focused, then moves to the top-l
 
 ### Do:
 - **Do** reuse the supplied mascot, wordmark, Our Promise lettering, and mustard-line assets.
-- **Do** use self-hosted Lato for copy and Lilita One for ordinary headings.
+- **Do** use self-hosted Lato for copy, Lilita One for live H2/H3 text, and SVG path artwork with real hidden HTML text for H1s.
 - **Do** preserve circular game artwork, open spacing, and the shared paper canvas.
 - **Do** retain visible keyboard focus, current-page navigation, and reduced-motion behavior.
 
 ### Don't:
-- **Don't** replace custom lettering with a typed approximation.
+- **Don't** replace H1 or supplied custom lettering with a live font, embedded bitmap, or SVG text element.
 - **Don't** introduce shadows, bordered game cards, or a fictional input library as existing patterns.
 - **Don't** present the generated sample signature as authentic handwriting.
 - **Don't** substitute the concept's illustrative game placeholders for the confirmed games' real icons.

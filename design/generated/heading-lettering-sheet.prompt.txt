@@ -1,0 +1,13 @@
+Create one production lettering asset sheet for Help Yourself, matching the bespoke lettering in the attached approved website reference, especially its "Our Promise" heading. This is graphic lettering artwork, not a webpage.
+
+White background, flat solid black ink only, no gray, shadows, outlines, textures, highlights, illustrations, labels, frames, guides, or other content. Use the reference's soft chunky hand-drawn cartoon letterforms: rounded irregular edges, friendly slightly uneven rhythm, substantial weight, human-drawn shapes. Do not substitute a conventional font. Preserve the exact upper/lower case and punctuation below.
+
+Make a large landscape sheet with FIVE separate, centered, single-line phrases in FIVE evenly spaced horizontal rows, top to bottom. Leave broad blank white gaps between rows and generous blank margins at both sides. All rows should have similar letter height. Every phrase must be fully visible and precisely spelled. No row numbers.
+
+Row 1: "Our games"
+Row 2: "A little more play."
+Row 3: "Help us keep playing."
+Row 4: "Your time is for playing."
+Row 5: "Page not found."
+
+Keep each phrase on one line so it can be independently traced into clean SVG paths. Keep letters in separate words visually separated. Use a wide, high-resolution canvas, approximately 2400 pixels wide and 1600 pixels tall. These are website H1 headings, and their style must match the custom Our Promise artwork from the supplied design, not the narrower live-font headings used in the site's interim implementation.

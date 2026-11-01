@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T02:15:51.936052+00:00",
+  "generatedAt": "2026-11-01T03:34:28.926033+00:00",
   "title": "Design System: Help Yourself",
   "extensions": {
     "colorMeta": {
@@ -31,12 +31,12 @@
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Interior page heading",
-        "purpose": "Fluid Lilita One page introductions."
+        "displayName": "Interior H1 hidden/fallback text",
+        "purpose": "Lato, clamp(38px, 5vw, 60px), line-height 1 applies only to hidden/fallback H1 text. Visible H1s use true SVG paths with real HTML text retained for accessibility. Interior artwork uses height clamp(42px, 5vw, 60px), width auto, max-width 100%, object-fit contain, and centered inline margins; the 404 has inline path artwork."
       },
       "title": {
         "displayName": "Section and preview title",
-        "purpose": "Desktop homepage game titles and prose subheadings."
+        "purpose": "Live Lilita One text for desktop homepage game titles and prose H2 subheadings; visible H1s are SVG path artwork."
       },
       "body": {
         "displayName": "Body copy",
@@ -119,9 +119,9 @@
   ],
   "narrative": {
     "northStar": "Help Yourself",
-    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line PNG wordmark, custom Our Promise lettering, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open, centered, and readable, with playful display type and plain body copy.",
+    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark and Our Promise lettering preserved as traced SVG paths, generated page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open, centered, and readable, with playful display type and plain body copy.",
     "keyCharacteristics": [
-      "Supplied mascot and lettering assets.",
+      "Supplied mascot and lettering, with custom SVG path artwork for visible H1s.",
       "Warm ivory canvas, charcoal text, mustard separators, and relish actions.",
       "Circular game artwork and generous vertical spacing.",
       "Self-hosted Lato and Lilita One.",
@@ -130,12 +130,12 @@
     "rules": [],
     "dos": [
       "Do reuse the supplied mascot, wordmark, Our Promise lettering, and mustard-line assets.",
-      "Do use self-hosted Lato for copy and Lilita One for ordinary headings.",
+      "Do use self-hosted Lato for copy, Lilita One for live H2/H3 text, and SVG path artwork with real hidden HTML text for H1s.",
       "Do preserve circular game artwork, open spacing, and the shared paper canvas.",
       "Do retain visible keyboard focus, current-page navigation, and reduced-motion behavior."
     ],
     "donts": [
-      "Don't replace custom lettering with a typed approximation.",
+      "Don't replace H1 or supplied custom lettering with a live font, embedded bitmap, or SVG text element.",
       "Don't introduce shadows, bordered game cards, or a fictional input library as existing patterns.",
       "Don't present the generated sample signature as authentic handwriting.",
       "Don't substitute the concept's illustrative game placeholders for the confirmed games' real icons."
