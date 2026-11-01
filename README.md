@@ -5,8 +5,9 @@ reference and brand assets. The lineup is Arrow Strum, Bus Bash, Block Breaker,
 and Timber Tumble.
 
 - Repository: https://github.com/ericie/helpyourself-games
-- Initial website: https://ericie.github.io/helpyourself-games/
-- Intended domain: https://helpyourself.games (DNS connection pending)
+- Website: https://helpyourself.games
+- GitHub Pages address: https://ericie.github.io/helpyourself-games/ (redirects to the custom domain)
+- Alternate hostname: https://www.helpyourself.games (redirects to the primary domain)
 - Hosting: GitHub Pages, published from `main` → `/docs`
 - Stack: plain HTML and CSS; no dependencies, CMS, or build step
 
@@ -68,7 +69,7 @@ under the repository's **Actions** tab. Hosting settings are under
   checkout is configured yet.
 - Confirm the existing games' `support@helpyourself.games` inbox receives mail.
 - Review the website copy and privacy information.
-- Connect `HelpYourself.games` using [DOMAIN-SETUP.md](DOMAIN-SETUP.md).
+- Keep the configured domain records in [DOMAIN-SETUP.md](DOMAIN-SETUP.md).
 
 ## Asset sources
 

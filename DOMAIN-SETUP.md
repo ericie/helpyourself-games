@@ -1,40 +1,47 @@
-# Connect HelpYourself.games
+# HelpYourself.games domain configuration
 
-The initial site uses https://ericie.github.io/helpyourself-games/. The custom domain
-is intentionally pending so that the preview remains accessible while DNS is set up.
+Configured on November 1, 2026.
 
-At setup on November 1, 2026, DNS pointed to Namecheap parking:
-
-- Apex A record: `162.255.119.230`
-- `www` CNAME: `parkingpage.namecheap.com.`
+- Primary domain: `helpyourself.games`
+- Alternate domain: `www.helpyourself.games` (GitHub Pages redirects to the primary domain)
+- Registrar/DNS provider: Namecheap BasicDNS
 - Nameservers: `dns1.registrar-servers.com` and `dns2.registrar-servers.com`
+- GitHub repository: `ericie/helpyourself-games`
+- Pages publishing source: `main` → `/docs`
+- Tracked domain declaration: `docs/CNAME`
 
-## Connect the domain when ready
+## Website DNS records
 
-1. In your GitHub account's **Settings → Pages**, verify ownership of
-   `helpyourself.games` using GitHub's provided TXT record.
-2. In this repository's **Settings → Pages**, save `helpyourself.games` as the
-   custom domain **before** changing the routing records below. GitHub creates
-   `docs/CNAME`; pull that commit locally with `git pull --ff-only`.
-3. In Namecheap's DNS settings, remove the parking/URL redirect record for `@`
-   and the parking CNAME for `www`. Replace them with:
+| Type | Host | Value |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | ericie.github.io |
 
-   | Type | Host | Value |
-   | --- | --- | --- |
-   | A | @ | 185.199.108.153 |
-   | A | @ | 185.199.109.153 |
-   | A | @ | 185.199.110.153 |
-   | A | @ | 185.199.111.153 |
-   | CNAME | www | ericie.github.io |
+The Namecheap parking CNAME and apex URL redirect were replaced by these records.
+The existing Private Email setup and `privateemail._domainkey` DKIM TXT record
+were preserved. MX records remain `mx1.privateemail.com` and
+`mx2.privateemail.com`, both priority 10.
 
-   Keep any existing email, verification, or other unrelated DNS records.
-4. Wait for GitHub's DNS check and TLS certificate to complete, then enable
-   **Enforce HTTPS** in the repository's Pages settings.
-5. Confirm `https://helpyourself.games` and `https://www.helpyourself.games` both
-   reach the site. GitHub redirects `www` to the configured apex domain.
+## HTTPS and verification
 
-DNS changes can take up to 24 hours. Recheck the current GitHub documentation
-before changing records:
+GitHub Pages provisions and renews the TLS certificate. The repository's
+Settings → Pages shows certificate status and the Enforce HTTPS setting.
+DNS changes must propagate before GitHub can complete certificate issuance.
 
-- [Manage a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
-- [Verify a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)
+Use these read-only checks when diagnosing the domain:
+
+```sh
+dig +short helpyourself.games A
+dig +short www.helpyourself.games CNAME
+dig +short helpyourself.games MX
+gh api repos/ericie/helpyourself-games/pages
+gh api repos/ericie/helpyourself-games/pages/health
+```
+
+Account-level domain verification is managed separately in GitHub's profile
+Settings → Pages. If enabled, keep GitHub's challenge TXT record in Namecheap.
+
+[GitHub custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
