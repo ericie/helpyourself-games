@@ -13,6 +13,7 @@ A small website serving HelpYourself.games, introducing the games and the studio
 
 ## Capabilities and Constraints
 Confirmed game lineup: Arrow Strum, Bus Bash, Block Breaker, Timber Tumble.
+All four games must display “Coming Soon” until the user has set up the App Store account and provides release links.
 The custom domain is owned by the user; DNS connection is pending.
 Game store URLs and the support payment destination are not yet supplied. Do not invent download links or payment providers.
 

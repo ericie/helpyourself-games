@@ -116,7 +116,7 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .game-detail { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 48px; align-items: center; max-width: 800px; margin-inline: auto; scroll-margin-top: 130px; }
 .game-detail h2 { font-size: 36px; margin: 0 0 16px; }
 .game-detail p { max-width: 45ch; }
-.game-detail .availability { color: var(--color-relish-dark); font-size: 16px; font-weight: 700; margin-bottom: 0; }
+.game-detail .availability, .game-preview .availability { color: var(--color-relish-dark); font-size: 16px; font-weight: 700; margin-bottom: 0; }
 .page-end { margin: 72px 0 0; text-align: center; }
 .page-end a { display: inline-flex; align-items: center; gap: 8px; }
 @media (max-width: 640px) {
