@@ -118,7 +118,7 @@ The shared site width is capped at 960px with desktop side gutters of 32px. Read
 
 The homepage is a centered, single-column lineup. Each game uses circular artwork, a linked title, and a short summary, with 72px between previews. The current order is Arrow Strum, Bus Bash, Block Breaker, Timber Tumble. The promise block is capped at 800px and follows with the same generous vertical rhythm. The home composition is documented in [the homepage brief](design/homepage-brief.md); it is not a requirement to make every interior page a centered lineup.
 
-Interior pages begin below the fixed header with 156px top padding. Game details use 230px artwork beside copy, a 48px gap, and an 800px maximum width. The about page uses a two-column layout with a 48px gap. Footer contents sit on one flex row beneath the mustard line.
+Interior pages begin below the fixed header with 156px top padding. Game details use 230px artwork beside copy, a 48px gap, and an 800px maximum width. The about page uses a two-column layout with a 48px gap. Both mustard separators span the full viewport, while footer contents stay on one centered flex row within the site-width gutters beneath the line.
 
 At `max-width: 640px`, header and footer gutters become 16px, interior gutters become 20px, the compact brand becomes 70px wide, and the hero uses a 270px width with 100px top padding and a 245px mascot. Circular artwork becomes 220px. Game spacing becomes 60px; interior top padding becomes 132px. About and game-detail layouts stack into one column. Promise copy wraps naturally with desktop-only breaks hidden. At `max-width: 360px`, the compact brand becomes 60px and navigation gaps tighten again.
 
@@ -146,7 +146,7 @@ The artwork and title are one link, followed by a separate summary. The artwork 
 
 ### Brand header and decorative separators
 
-The supplied compact wordmark links home. On the homepage it is hidden from view, keyboard navigation, and assistive technology until the large hero has scrolled away. Its opacity transition is 180ms ease-out. Interior pages show it immediately. The mustard-line SVG repeats across 24px-tall header and footer separators; the home header initially leaves space for the hero.
+The supplied compact wordmark links home. On the homepage it is hidden from view, keyboard navigation, and assistive technology until the large hero has scrolled away. Its opacity transition is 180ms ease-out. Interior pages show it immediately. The mustard-line SVG repeats across full-width, 24px-tall header and footer separators. Each separator uses one continuous background, with matching tile endpoint heights and tangents for smooth joins. The mascot sits above the header rule.
 
 ### Skip link and motion
 

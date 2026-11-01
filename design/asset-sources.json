@@ -5,7 +5,7 @@
     "docs/assets/brand/help-yourself-wordmark.png": "assets/brand/help-yourself-wordmark.png",
     "docs/assets/brand/our-promise.png": "assets/brand/our-promise.png",
     "docs/assets/characters/cherry-pie.png": "assets/characters/cherry-pie.png",
-    "docs/assets/brand/mustard-line.svg": "assets/brand/mustard-line.svg (preserveAspectRatio adjusted for layout)"
+    "docs/assets/brand/mustard-line.svg": "assets/brand/mustard-line.svg (preserveAspectRatio adjusted for layout; endpoints matched in position and tangent for seamless repetition)"
   },
   "existingGameWorkspace": {
     "docs/assets/games/arrow-strum.png": "apps/arrow_maze/web/icons/Icon-512.png",
