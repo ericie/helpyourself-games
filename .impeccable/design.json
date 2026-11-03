@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-03T11:40:31.670366+00:00",
+  "generatedAt": "2026-11-03T11:51:45.596395+00:00",
   "title": "Design System: Help Yourself",
   "extensions": {
     "colorMeta": {
@@ -135,7 +135,7 @@
   ],
   "narrative": {
     "northStar": "Help Yourself",
-    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark preserved as traced SVG paths, generated My Promise and page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open and readable, with playful display type and plain body copy. Copy speaks in Eric’s approved I/me voice for his one-person studio. About’s supplied pie character and Support’s generated coin-bank character accompany the short interior stories. The homepage keeps its centered brand and promise, with a two-column, left-aligned games gallery on desktop and a centered single-column lineup on mobile. Interior pages follow the user-approved preference for left-aligned headings and copy, simple layouts, and pithy messaging: brief stories and a plain privacy reading column. The homepage now supplies the single games destination.",
+    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark preserved as traced SVG paths, generated My Promise and page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open and readable, with playful display type and plain body copy. Copy speaks in Eric’s approved I/me voice for his one-person studio. About’s supplied pie character and Support’s generated coin-bank character accompany the short interior stories. The homepage keeps its centered brand and promise, with a two-column games gallery with centered icons and left-aligned captions on desktop and a centered single-column lineup on mobile. Interior pages follow the user-approved preference for left-aligned headings and copy, simple layouts, and pithy messaging: brief stories and a plain privacy reading column. The homepage now supplies the single games destination.",
     "keyCharacteristics": [
       "Supplied mascot and lettering, with custom SVG path artwork for visible H1s.",
       "Warm ivory canvas, charcoal text, mustard separators, and relish actions.",
