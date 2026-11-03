@@ -18,7 +18,7 @@
       },
       "ketchup": {
         "role": "tertiary",
-        "displayName": "Ketchup (defined, unassigned)"
+        "displayName": "Ketchup (scrollbar)"
       },
       "paper": {
         "role": "neutral",

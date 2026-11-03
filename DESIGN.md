@@ -102,14 +102,14 @@ The hot-dog mascot, supplied two-line wordmark preserved as traced SVG paths, ge
 The frontmatter preserves the existing CSS palette; no additional shades are specified.
 
 ### Primary
-- **Mustard:** The decorative header and footer separators use the supplied mustard-line SVG. The mustard token also colors the scrollbar.
+- **Mustard:** The decorative header and footer separators use the supplied mustard-line SVG.
 
 ### Secondary
 - **Relish:** Filled action links, keyboard focus outlines, and text selection background.
 - **Dark relish:** Action hover background and the homepage’s availability messages.
 
 ### Tertiary
-- **Ketchup:** Existing brand palette token. The stylesheet defines it but does not currently assign it to an interface selector; do not infer a new action or error role.
+- **Ketchup:** The scrollbar thumb uses this brand color against the paper track.
 
 ### Neutral
 - **Paper:** The page canvas, interior header, button text, and selection text.
