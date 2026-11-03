@@ -81,6 +81,14 @@ the supplied PNG alpha channel. The earlier Our Promise tracing and its original
 PNG remain preserved as historical sources; the visible heading is now My Promise. The sample signature and concept game previews
 are retained as source material and are not displayed.
 
+The Support page’s `docs/assets/characters/coin-bank.png` is a native-generated,
+transparent RGBA illustration (1223×1286) of a smiling piggy bank depositing a gold
+coin into its own slot. Its exact prompt is saved in
+`design/generated/coin-bank-character.prompt.txt` and embedded in the PNG; the
+asset manifest records its provenance. About continues to use the supplied
+cherry-pie illustration, displayed a little larger. Both illustrations accompany
+left-aligned text and stack with it on narrow screens.
+
 The four game icons come from the existing Help Yourself game workspace. Source
 details are recorded in [design/asset-sources.json](design/asset-sources.json).
 Lato supplies body copy and Lilita One supplies live H2/H3 text. Both are

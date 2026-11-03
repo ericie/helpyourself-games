@@ -49,5 +49,11 @@
       "docs/assets/headings/thanks-for-playing.svg"
     ],
     "replaces": "Visible Our games, Our Promise, and Help us keep playing. lettering; original sources retained for provenance."
+  },
+  "coinBankCharacter": {
+    "asset": "docs/assets/characters/coin-bank.png",
+    "prompt": "design/generated/coin-bank-character.prompt.txt",
+    "method": "Native image generation with transparent background, matching the supplied character style. Original generated PNG preserved with its exact prompt embedded.",
+    "description": "Anthropomorphic piggy bank putting a gold coin into its own slot while holding more coins."
   }
 }

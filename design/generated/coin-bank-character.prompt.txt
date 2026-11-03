@@ -1,0 +1,9 @@
+Use case: illustration-story
+Asset type: small transparent character illustration for the Help Yourself game studio Support page.
+Primary request: A friendly anthropomorphic piggy bank putting coins into its own coin slot.
+
+Draw a complete single character, fully visible, on a genuinely transparent background. A small plump ceramic piggy bank with a warm blush-pink body, a distinct dark coin slot on the top of its own back, two tiny round white eyes with black pupils, a small cheerful smile, thin bendy black stick arms, thin black legs, and little flat black shoes. One of its own arms reaches up and over its body, holding a golden coin vertically just above its own slot, clearly in the act of depositing it. Its other hand holds two more golden coins. The coin and receiving slot must be visually connected and easy to read at small size. No second character, no external jar, no external bank, no floating extra hands.
+
+Style: simple charming hand-drawn cartoon mascot, bold slightly irregular black ink contours, clean enclosed shapes, restrained soft color shading, friendly naive proportions. Match a website mascot family featuring a smiling golden cherry-pie slice with tiny round white eyes, a curved black smile, thin black arms and legs, and flat black shoes. Keep the same spare face and limbs; avoid polished 3D rendering, realistic anatomy, anime, glossy plastic, or intricate detail.
+
+Composition: portrait full-body cutout, broad clear silhouette, all feet, hands, coins and the slot fully in frame. Tight but comfortable transparent margins. Pink, golden mustard-yellow coins, charcoal black and tiny white eye accents only. No typography, numbers, logos, currency symbols, scenery, floor, cast shadow, gradients in the background, or decorative marks.
