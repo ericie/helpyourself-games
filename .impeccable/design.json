@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T03:34:28.926033+00:00",
+  "generatedAt": "2026-11-03T09:03:49.033417+00:00",
   "title": "Design System: Help Yourself",
   "extensions": {
     "colorMeta": {
@@ -36,7 +36,7 @@
       },
       "title": {
         "displayName": "Section and preview title",
-        "purpose": "Live Lilita One text for desktop homepage game titles and prose H2 subheadings; visible H1s are SVG path artwork."
+        "purpose": "Live Lilita One for desktop homepage game titles and interior gallery H2s (30px); gallery H2s become 26px at 640px and below. Visible H1s remain SVG path artwork."
       },
       "body": {
         "displayName": "Body copy",
@@ -47,8 +47,16 @@
         "purpose": "Desktop header links; smaller on narrow screens."
       },
       "button": {
-        "displayName": "Action label",
-        "purpose": "Bold Lato within filled action links."
+        "displayName": "Bold action label",
+        "purpose": "Bold Lato for the homepage filled action and the simplified interiors’ unfilled text actions; 17px at the narrow breakpoint."
+      },
+      "page-lead": {
+        "displayName": "Short interior lead",
+        "purpose": "About and Support leads use Lato at 22px, line-height 1.45, becoming 20px at 640px and below."
+      },
+      "privacy-heading": {
+        "displayName": "Privacy reading heading",
+        "purpose": "Plain bold Lato H2 at 20px, line-height 1.1, within the 600px privacy reading column."
       }
     },
     "shadows": [],
@@ -80,9 +88,17 @@
       "name": "Filled action link",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Shared support and exploration action; implemented as an anchor.",
+      "description": "Filled support action on the homepage; the simplified interiors use the unfilled text action.",
       "html": "<a class=\"ds-button\" href=\"#support\">Support the studio <svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
       "css": ".ds-button{font-family:var(--font-body,Lato,sans-serif);font-size:18px;line-height:1.5;color:var(--color-ink,#232323);display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:48px;padding:11px 23px;border-radius:var(--radius-button,8px);color:var(--color-paper,#fffdf5);background:var(--color-relish,#247327);font-weight:700;text-decoration:none;transition:background-color 180ms ease-out}.ds-button svg{width:1.1em;height:1.1em;flex:none}.ds-button:hover{background:var(--color-relish-dark,#19531c);text-decoration:none}.ds-button:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-button{font-size:17px}}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Text action",
+      "kind": "custom",
+      "refersTo": "text-action",
+      "description": "Unfilled, underlined action used on About and Support.",
+      "html": "<a class=\"ds-text-action\" href=\"#games\">Meet the games <svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-text-action{font-family:var(--font-body,Lato,sans-serif);font-size:18px;line-height:1.5;color:var(--color-ink,#232323);min-height:44px;display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:underline;text-underline-offset:.22em}.ds-text-action svg{width:1.1em;height:1.1em;flex:none}.ds-text-action:hover{text-decoration-thickness:2px}.ds-text-action:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px}@media(max-width:640px){.ds-text-action{font-size:17px}}"
     },
     {
       "name": "Main navigation",
@@ -104,7 +120,7 @@
       "name": "Game title link",
       "kind": "custom",
       "refersTo": "game-title-link",
-      "description": "Title portion of the homepage preview link; the full implementation also contains the supplied circular game PNG.",
+      "description": "Title portion of the homepage preview link; the interior gallery uses static headings and smaller circular artwork.",
       "html": "<a class=\"ds-game-link\" href=\"#arrow-strum\"><h3>Arrow Strum</h3></a>",
       "css": ".ds-game-link{display:inline-block;color:var(--color-ink,#232323);text-decoration:none}.ds-game-link h3{font-family:var(--font-display,\"Lilita One\",sans-serif);font-weight:400;font-size:30px;line-height:1.1;text-wrap:balance;margin:0}.ds-game-link:hover h3{text-decoration:underline;text-underline-offset:.14em}.ds-game-link:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-game-link h3{font-size:29px}}"
     },
@@ -119,19 +135,20 @@
   ],
   "narrative": {
     "northStar": "Help Yourself",
-    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark and Our Promise lettering preserved as traced SVG paths, generated page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open, centered, and readable, with playful display type and plain body copy.",
+    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark and Our Promise lettering preserved as traced SVG paths, generated page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open, centered, and readable, with playful display type and plain body copy. Interior pages follow the user-approved preference for simple, clean layouts and pithy messaging: brief centered stories, a compact games gallery, and a plain privacy reading column.",
     "keyCharacteristics": [
       "Supplied mascot and lettering, with custom SVG path artwork for visible H1s.",
       "Warm ivory canvas, charcoal text, mustard separators, and relish actions.",
-      "Circular game artwork and generous vertical spacing.",
+      "Circular game artwork, generous homepage spacing, and concise interior pages.",
       "Self-hosted Lato and Lilita One.",
       "Flat surfaces with visible keyboard focus."
     ],
     "rules": [],
     "dos": [
       "Do reuse the supplied mascot, wordmark, Our Promise lettering, and mustard-line assets.",
-      "Do use self-hosted Lato for copy, Lilita One for live H2/H3 text, and SVG path artwork with real hidden HTML text for H1s.",
+      "Do use self-hosted Lato for copy and Privacy H2s, Lilita One for game headings, and SVG path artwork with real hidden HTML text for H1s.",
       "Do preserve circular game artwork, open spacing, and the shared paper canvas.",
+      "Do keep interior messaging short, with one clear reading order and simple text actions.",
       "Do retain visible keyboard focus, current-page navigation, and reduced-motion behavior."
     ],
     "donts": [
