@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-03T10:50:00.333491+00:00",
+  "generatedAt": "2026-11-03T11:04:22.381765+00:00",
   "title": "Design System: Help Yourself",
   "extensions": {
     "colorMeta": {
@@ -105,7 +105,7 @@
       "kind": "nav",
       "refersTo": "navigation",
       "description": "Text navigation with underline on hover or the current page.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#games\" aria-current=\"page\">Games</a><a href=\"#about\">About</a><a href=\"#support\">Support us <svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></nav>",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#games\" aria-current=\"page\">Games</a><a href=\"#about\">About</a><a href=\"#support\">Support <svg viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></nav>",
       "css": ".ds-nav{display:flex;align-items:center;gap:26px}.ds-nav a{font-family:var(--font-body,Lato,sans-serif);font-size:18px;line-height:1.5;color:var(--color-ink,#232323);display:inline-flex;align-items:center;gap:4px;min-height:44px;font-size:16px;text-decoration:none;text-underline-offset:.22em}.ds-nav svg{width:1.1em;height:1.1em;flex:none}.ds-nav a:hover,.ds-nav a[aria-current=\"page\"]{text-decoration:underline}.ds-nav a:hover{text-decoration-thickness:2px}.ds-nav a:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-nav{gap:17px}.ds-nav a{font-size:15px}}@media(max-width:360px){.ds-nav{gap:12px}.ds-nav a{font-size:14px}}"
     },
     {
@@ -135,7 +135,7 @@
   ],
   "narrative": {
     "northStar": "Help Yourself",
-    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark and Our Promise lettering preserved as traced SVG paths, generated page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open and readable, with playful display type and plain body copy. The homepage keeps its centered composition. Interior pages follow the user-approved preference for left-aligned headings and copy, simple layouts, and pithy messaging: brief stories, a compact games gallery, and a plain privacy reading column.",
+    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark preserved as traced SVG paths, generated My Promise and page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open and readable, with playful display type and plain body copy. Copy speaks in Eric’s approved I/me voice for his one-person studio. The homepage keeps its centered composition. Interior pages follow the user-approved preference for left-aligned headings and copy, simple layouts, and pithy messaging: brief stories, a compact games gallery, and a plain privacy reading column.",
     "keyCharacteristics": [
       "Supplied mascot and lettering, with custom SVG path artwork for visible H1s.",
       "Warm ivory canvas, charcoal text, mustard separators, and relish actions.",
@@ -145,7 +145,7 @@
     ],
     "rules": [],
     "dos": [
-      "Do reuse the supplied mascot, wordmark, Our Promise lettering, and mustard-line assets.",
+      "Do reuse the supplied mascot, wordmark, mustard-line assets, and current My Promise path lettering; retain earlier lettering as historical source material.",
       "Do use self-hosted Lato for copy and Privacy H2s, Lilita One for game headings, and SVG path artwork with real hidden HTML text for H1s.",
       "Do preserve circular game artwork, open spacing, and the shared paper canvas.",
       "Do keep interior messaging short, with headings and copy sharing a left edge, one clear reading order, and simple text actions.",

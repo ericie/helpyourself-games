@@ -88,7 +88,7 @@ components:
 
 This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).
 
-The hot-dog mascot, supplied two-line wordmark and Our Promise lettering preserved as traced SVG paths, generated page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open and readable, with playful display type and plain body copy. The homepage keeps its centered composition. Interior pages follow the user-approved preference for left-aligned headings and copy, simple layouts, and pithy messaging: brief stories, a compact games gallery, and a plain privacy reading column.
+The hot-dog mascot, supplied two-line wordmark preserved as traced SVG paths, generated My Promise and page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open and readable, with playful display type and plain body copy. Copy speaks in Eric’s approved I/me voice for his one-person studio. The homepage keeps its centered composition. Interior pages follow the user-approved preference for left-aligned headings and copy, simple layouts, and pithy messaging: brief stories, a compact games gallery, and a plain privacy reading column.
 
 **Key Characteristics:**
 - Supplied mascot and lettering, with custom SVG path artwork for visible H1s.
@@ -119,7 +119,7 @@ The frontmatter preserves the existing CSS palette; no additional shades are spe
 
 **Visible H1 lettering:** SVG path artwork. The user explicitly rejected a live font for page H1s. **Game H2/H3 Font:** Lilita One, with sans-serif fallback. **Privacy H2 Font:** bold Lato. **Body Font:** Lato, with sans-serif fallback. Both fonts are self-hosted under `docs/assets/fonts`; Lato has regular and bold files, and Lilita One uses its regular file. Font synthesis is disabled in the shared stylesheet.
 
-All visible H1s use actual SVG paths, with no embedded bitmap or SVG text. The home wordmark, compact header wordmark, and Our Promise artwork are traced from the alpha channels of the original supplied PNGs, preserving their lettering. Four interior H1s use artwork generated in `design/generated/heading-lettering-sheet.png` and traced into `docs/assets/headings/`: Our games, A little more play., Help us keep playing., and Your time is for playing. The standalone 404 heading uses the generated Page not found. artwork as inline paths. Sources and tracing provenance are recorded in [the asset manifest](design/asset-sources.json).
+All visible H1s use actual SVG paths, with no embedded bitmap or SVG text. The home and compact header wordmarks are traced from the alpha channel of the original supplied PNG. The current Games H1 (`docs/assets/headings/games.svg`, 883×264), My Promise H2 (`docs/assets/headings/my-promise.svg`, 1339×289), and Thanks for playing. H1 (`docs/assets/headings/thanks-for-playing.svg`, 1487×222) come from `design/generated/solo-studio-lettering-sheet.png`, with its adjacent prompt file retained. About’s A little more play. and Privacy’s Your time is for playing. still use the earlier `design/generated/heading-lettering-sheet.png`; its Page not found. artwork remains inline on the standalone 404. The earlier Our games, Our Promise, and Help us keep playing. lettering is retained as historical source material and is not currently displayed. Both sheets are traced by `design/trace-lettering.py`. Sources and provenance are recorded in [the asset manifest](design/asset-sources.json).
 
 Each H1 keeps its actual words in a visually hidden HTML span. Decorative artwork is `aria-hidden="true"`; external images also use empty alt text. The interior H1's Lato font and fluid font-size in the frontmatter's display role apply to hidden/fallback text, not the visible lettering. Its line-height is 1. The artwork has height `clamp(42px, 5vw, 60px)`, automatic width, maximum width 100%, `object-fit: contain`, and `object-position: left center`, without automatic inline margins. The independent 404 uses the same height clamp and width limit for its inline SVG, with system-ui for its surrounding text.
 
@@ -137,7 +137,7 @@ The homepage is a centered, single-column lineup. Each game uses circular artwor
 
 Interior pages use 164px top padding, 48px bottom padding, and minimum height `calc(100svh - 130px)`. Their lettered page introduction has no repeated subtitle and leaves a 40px gap before content. The footer directly follows the interior without the homepage's extra top margin. Both mustard separators still span the full viewport, while footer contents stay on one centered flex row within the site-width gutters beneath the line.
 
-About uses a two-column grid across the interior canvas, with a flexible text column, a 200px art column, and a 48px column gap. Its short lead, three-line promise, and text action occupy the left column. The 200px-tall pie sits on the right, vertically centered and spanning grid rows 1 through 3 (`grid-row: 1 / 4`). The lead has 28px below it and the promise 20px. Support uses a left-aligned story capped at 480px, with a short lead, a brief tip-jar pending message, and a Say hello email action. Its supporting paragraph has 24px below it. Privacy uses a reading column capped at 600px, sharing the main canvas's left edge rather than recentering the narrower column. It has 32px above subsequent H2s, 12px below them, and 20px between paragraphs. The first privacy H2 has no top margin.
+About uses a two-column grid across the interior canvas, with a flexible text column, a 200px art column, and a 48px column gap. Its first-person introduction to Eric and his one-person studio, three-line promise, and text action occupy the left column. The 200px-tall pie sits on the right, vertically centered and spanning grid rows 1 through 3 (`grid-row: 1 / 4`). The lead has 28px below it and the promise 20px. Support uses a left-aligned story capped at 480px, with the approved tip invitation, “Tip jar coming soon.”, and a Say hello email action beneath Thanks for playing. There is no payment destination yet. Its supporting paragraph has 24px below it. Privacy uses a reading column capped at 600px, sharing the main canvas's left edge rather than recentering the narrower column. It has 32px above subsequent H2s, 12px below them, and 20px between paragraphs. The first privacy H2 has no top margin.
 
 The games page uses a two-column gallery across the 720px interior canvas, with 48px row gaps and 64px column gaps. Each entry left-aligns a 160px circular icon above its title, short description, and Coming Soon status. Icons have 16px below them, titles 8px, and descriptions 12px. Entries remain flat on the paper canvas without enclosing panels.
 
@@ -163,7 +163,7 @@ About and Support use a bold, underlined ink-colored anchor with an inline right
 
 ### Text links and navigation
 
-Ordinary links inherit text color, remain underlined, and use a 0.22em underline offset; hover thickens the underline to 2px. Navigation uses a horizontal flex row, 26px gaps, 44px minimum link heights, and no default underline. Hover and `aria-current="page"` add an underline. Footer navigation has 30px gaps and smaller type. All anchors share the visible keyboard outline.
+Ordinary links inherit text color, remain underlined, and use a 0.22em underline offset; hover thickens the underline to 2px. Navigation labels are Games, About, and Support. Navigation uses a horizontal flex row, 26px gaps, 44px minimum link heights, and no default underline. Hover and `aria-current="page"` add an underline. Footer navigation has 30px gaps and smaller type. All anchors share the visible keyboard outline.
 
 ### Game preview
 
@@ -171,7 +171,7 @@ The artwork and title are one link, followed by a separate summary. The artwork 
 
 ### Lettered page heading
 
-Use the traced page-specific SVG inside a semantic H1 alongside visually hidden real text. The artwork is decorative to assistive technology; it does not replace the accessible name. Keep its proportions and the shared height clamp described under Typography. The home H1 uses the traced supplied wordmark instead of the generated interior-heading sheet. Our Promise uses the same accessible image pattern in an H2. The README contains the developer markup example.
+Use the traced page-specific SVG inside a semantic H1 alongside visually hidden real text. The artwork is decorative to assistive technology; it does not replace the accessible name. Keep its proportions and the shared height clamp described under Typography. The home H1 uses the traced supplied wordmark instead of the generated interior-heading sheet. My Promise uses the same accessible image pattern in an H2. The README contains the developer markup example.
 
 ### Brand header and decorative separators
 
@@ -184,7 +184,7 @@ The skip link is fixed above the viewport until focused, then moves to the top-l
 ## Do's and Don'ts
 
 ### Do:
-- **Do** reuse the supplied mascot, wordmark, Our Promise lettering, and mustard-line assets.
+- **Do** reuse the supplied mascot, wordmark, mustard-line assets, and current My Promise path lettering; retain earlier lettering as historical source material.
 - **Do** use self-hosted Lato for copy and Privacy H2s, Lilita One for game headings, and SVG path artwork with real hidden HTML text for H1s.
 - **Do** preserve circular game artwork, open spacing, and the shared paper canvas.
 - **Do** keep interior messaging short, with headings and copy sharing a left edge, one clear reading order, and simple text actions.

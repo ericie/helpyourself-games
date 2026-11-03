@@ -38,5 +38,16 @@
   "repairedVectors": {
     "docs/assets/brand/help-yourself-wordmark.svg": "Traced from the provided help-yourself-wordmark.png alpha channel; preserves original lettering.",
     "docs/assets/brand/our-promise.svg": "Traced from the provided our-promise.png alpha channel; preserves original lettering."
+  },
+  "soloStudioLettering": {
+    "source": "design/generated/solo-studio-lettering-sheet.png",
+    "prompt": "design/generated/solo-studio-lettering-sheet.prompt.txt",
+    "method": "Native image generation, then monochrome path tracing with design/trace-lettering.py (vtracer 0.6.12). SVG paths only; no embedded raster or font text.",
+    "assets": [
+      "docs/assets/headings/games.svg",
+      "docs/assets/headings/my-promise.svg",
+      "docs/assets/headings/thanks-for-playing.svg"
+    ],
+    "replaces": "Visible Our games, Our Promise, and Help us keep playing. lettering; original sources retained for provenance."
   }
 }

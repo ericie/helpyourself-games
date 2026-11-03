@@ -53,23 +53,30 @@ def trace(mask, destination, label):
     print(f"{destination.relative_to(ROOT)}: {width}×{height}, {len(paths)} paths")
 
 
-sheet = Image.open(ROOT / "design/generated/heading-lettering-sheet.png").convert("RGB")
-ink = np.asarray(sheet).mean(axis=2) < 128
-rows = np.flatnonzero(ink.sum(axis=1) > 10)
-bands = []
-for y in rows:
-    if bands and y - bands[-1][-1] < 30:
-        bands[-1].append(int(y))
-    else:
-        bands.append([int(y)])
-assert len(bands) == len(HEADINGS), f"Expected five separated headings, got {len(bands)}"
-for (slug, label), band in zip(HEADINGS, bands):
-    row = ink[band[0]:band[-1] + 1]
-    columns = np.flatnonzero(row.any(axis=0))
-    crop = row[:, columns[0]:columns[-1] + 1]
-    crop = np.pad(crop, 4, constant_values=False)
-    trace(crop, ROOT / f"docs/assets/headings/{slug}.svg", label)
+def trace_sheet(source, headings):
+    sheet = Image.open(ROOT / source).convert("RGB")
+    ink = np.asarray(sheet).mean(axis=2) < 128
+    rows = np.flatnonzero(ink.sum(axis=1) > 10)
+    bands = []
+    for y in rows:
+        if bands and y - bands[-1][-1] < 30:
+            bands[-1].append(int(y))
+        else:
+            bands.append([int(y)])
+    assert len(bands) == len(headings), f"Expected {len(headings)} separated headings, got {len(bands)}"
+    for (slug, label), band in zip(headings, bands):
+        row = ink[band[0]:band[-1] + 1]
+        columns = np.flatnonzero(row.any(axis=0))
+        crop = row[:, columns[0]:columns[-1] + 1]
+        crop = np.pad(crop, 4, constant_values=False)
+        trace(crop, ROOT / f"docs/assets/headings/{slug}.svg", label)
 
-for slug, label in [("help-yourself-wordmark", "Help Yourself"), ("our-promise", "Our Promise")]:
-    image = Image.open(ROOT / f"docs/assets/brand/{slug}.png").convert("RGBA")
-    trace(np.asarray(image)[:, :, 3] >= 128, ROOT / f"docs/assets/brand/{slug}.svg", label)
+if __name__ == "__main__":
+    trace_sheet("design/generated/heading-lettering-sheet.png", HEADINGS)
+    trace_sheet("design/generated/solo-studio-lettering-sheet.png", [
+        ("games", "Games"), ("my-promise", "My Promise"),
+        ("thanks-for-playing", "Thanks for playing."),
+    ])
+    for slug, label in [("help-yourself-wordmark", "Help Yourself"), ("our-promise", "Our Promise")]:
+        image = Image.open(ROOT / f"docs/assets/brand/{slug}.png").convert("RGBA")
+        trace(np.asarray(image)[:, :, 3] >= 128, ROOT / f"docs/assets/brand/{slug}.svg", label)

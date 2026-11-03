@@ -2,7 +2,8 @@
 
 The static website for **HelpYourself.games**, built from the supplied homepage
 reference and brand assets. The lineup is Arrow Strum, Bus Bash, Block Breaker,
-and Timber Tumble.
+and Timber Tumble. Eric is an American living in Tokyo; Help Yourself is his
+one-person studio. Site copy uses his approved I/me voice.
 
 - Repository: https://github.com/ericie/helpyourself-games
 - Website: https://helpyourself.games
@@ -25,7 +26,7 @@ Open http://localhost:8000. Stop the server with `Ctrl+C`.
 
 ```text
 docs/                 Public website (GitHub Pages requires this folder name)
-  index.html          Home: brand, game lineup, and Our Promise
+  index.html          Home: brand, game lineup, and My Promise
   games/index.html    Game descriptions and availability
   about/index.html    About Help Yourself
   support/index.html  Support information (payment link pending)
@@ -33,7 +34,7 @@ docs/                 Public website (GitHub Pages requires this folder name)
   404.html            Page-not-found response
   .nojekyll           Serve files directly without Jekyll processing
   assets/             Brand art, SVG headings, game icons, fonts, shared CSS/JS
-design/               Sources, generated lettering sheet, trace tool, and brief
+design/               Sources, generated lettering sheets, trace tool, and brief
 PRODUCT.md            Product facts and pending launch decisions
 DESIGN.md             Visual system and implementation guidance
 DOMAIN-SETUP.md        Custom-domain instructions
@@ -75,9 +76,9 @@ under the repository's **Actions** tab. Hosting settings are under
 
 The supplied asset pack is retained across `docs/assets/` and
 `design/source-assets/`. The original rectangle-only SVG lettering stays in the
-source archive. The website now serves real SVG paths traced from the alpha
-channels of the supplied Help Yourself wordmark and Our Promise PNGs; the original
-PNGs remain preserved as sources. The sample signature and concept game previews
+source archive. The website serves the Help Yourself wordmark as real SVG paths traced from
+the supplied PNG alpha channel. The earlier Our Promise tracing and its original
+PNG remain preserved as historical sources; the visible heading is now My Promise. The sample signature and concept game previews
 are retained as source material and are not displayed.
 
 The four game icons come from the existing Help Yourself game workspace. Source
@@ -85,12 +86,17 @@ details are recorded in [design/asset-sources.json](design/asset-sources.json).
 Lato supplies body copy and Lilita One supplies live H2/H3 text. Both are
 self-hosted, with their SIL Open Font Licenses in `docs/assets/fonts/`.
 
-Visible H1s use path artwork rather than a live font. The four interior headings
-and Page not found lettering were generated in
-`design/generated/heading-lettering-sheet.png`, then traced into
-`docs/assets/headings/*.svg`. The 404 page includes its paths inline so it remains
-self-contained. The home H1 and compact header use the traced supplied wordmark.
-None of these lettering SVGs embeds a bitmap or uses an SVG text element.
+Visible H1s use path artwork rather than a live font. The current Games H1,
+My Promise H2, and Thanks for playing. H1 come from
+`design/generated/solo-studio-lettering-sheet.png` and its adjacent `.prompt.txt`
+file. Their traced assets are `docs/assets/headings/games.svg` (883×264),
+`my-promise.svg` (1339×289), and `thanks-for-playing.svg` (1487×222).
+About, Privacy, and Page not found retain lettering generated in
+`design/generated/heading-lettering-sheet.png`. The older Our games, Our Promise,
+and Help us keep playing. lettering remains as historical source material.
+The 404 page includes its paths inline so it remains self-contained. The home H1
+and compact header use the traced supplied wordmark. None of these lettering SVGs
+embeds a bitmap or uses an SVG text element.
 
 ## Accessible heading markup
 
@@ -100,9 +106,9 @@ the heading twice. For example, on a nested page using the shared stylesheet:
 
 ```html
 <h1 class="lettered-heading">
-  <span class="visually-hidden">Our games</span>
-  <img class="heading-art" src="../assets/headings/our-games.svg"
-       alt="" aria-hidden="true" width="720" height="176">
+  <span class="visually-hidden">Games</span>
+  <img class="heading-art" src="../assets/headings/games.svg"
+       alt="" aria-hidden="true" width="883" height="264">
 </h1>
 ```
 
@@ -111,7 +117,7 @@ The existing `.heading-art` rule uses `height: clamp(42px, 5vw, 60px)`, `width: 
 narrow screens. The H1's Lato styling applies only to hidden/fallback text.
 For inline SVG, keep the real HTML span and use `aria-hidden="true"` and
 `focusable="false"` on the artwork, as the 404 page does. The home wordmark and
-Our Promise H2 use the same hidden-text/decorative-image accessibility pattern.
+My Promise H2 use the same hidden-text/decorative-image accessibility pattern.
 
 ## Optional lettering regeneration
 
@@ -125,8 +131,9 @@ python3 -m venv .venv-lettering
 .venv-lettering/bin/python design/trace-lettering.py
 ```
 
-The script reads the generated heading sheet and the original brand PNG alpha
-channels, then writes five heading SVGs and the two brand SVGs. It traces
+The script reads both generated lettering sheets and the original brand PNG alpha
+channels, then writes eight heading SVGs and the two brand SVGs, including retained
+historical lettering. It traces
 monochrome paths and checks for unexpected empty/rectangle results, embedded
 images, and SVG text. If Page not found artwork changes, also synchronize the
 inline SVG in `docs/404.html`; the script does not update HTML. Review regenerated

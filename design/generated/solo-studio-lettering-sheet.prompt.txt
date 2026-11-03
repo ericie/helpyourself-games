@@ -1,0 +1,11 @@
+Create one production lettering asset sheet for the Help Yourself game studio. This is graphic lettering artwork, not a webpage.
+
+Use soft, extremely chunky, hand-drawn cartoon lettering: rounded irregular edges, substantial black weight, friendly slightly uneven rhythm, generous counters, and human-drawn shapes. Match the site's existing bulbous bespoke lettering. Do not substitute a conventional font. Flat solid black ink on a pure white background. No gray, shadows, outlines, texture, highlights, illustrations, labels, frames, or guides.
+
+Make a landscape sheet with THREE separate single-line phrases, one per row, top to bottom, with broad blank white gaps between rows and generous margins. All rows have similar letter height. Every phrase is fully visible and exactly spelled, with this capitalization and punctuation:
+
+Row 1: "Games"
+Row 2: "My Promise"
+Row 3: "Thanks for playing."
+
+Center the phrases on the sheet. Keep each phrase on one line, suitable for independent tracing into clean vector paths. Keep separate words visibly separated. Use a wide high-resolution canvas. No other content.

@@ -9,7 +9,7 @@ web
 Plain static HTML, CSS, and a small progressive-enhancement script. GitHub Pages publishes main → /docs. No CMS, runtime dependencies, or build step.
 
 ## Product Purpose
-A small website serving HelpYourself.games, introducing the games and the studio.
+A small website serving HelpYourself.games, introducing the games and Eric’s one-person studio. Eric is an American living in Tokyo.
 
 ## Capabilities and Constraints
 Confirmed game lineup: Arrow Strum, Bus Bash, Block Breaker, Timber Tumble.
@@ -18,11 +18,13 @@ The user-owned custom domain helpyourself.games is connected to GitHub Pages. Th
 Game store URLs and the support payment destination are not yet supplied. Do not invent download links or payment providers.
 
 ## Brand Commitments
-Use the user-supplied asset pack and homepage reference. Preserve the hot-dog mascot, custom Help Yourself lettering, mustard separators, single-column game lineup, and supplied Our Promise copy.
+Use the user-supplied asset pack and homepage reference. Preserve the hot-dog mascot, custom Help Yourself lettering, mustard separators, single-column game lineup, and the promise of no ads, no in-app purchases, and no selling player data. The user-approved first-person My Promise copy supersedes the supplied Our Promise wording; retain the original assets as historical sources.
 
 Page H1 headings use custom SVG path artwork matching the approved lettering, with real HTML text retained for accessibility. Do not replace this lettering with a live display font.
 
 Interior pages should stay simple and clean, with left-aligned headings and copy, pithy messaging, and minimal repeated content. The approved homepage remains the reference for its own composition.
+
+Use Eric’s first-person voice (I/me) for the solo studio. Approved About copy: “I’m Eric, an American living in Tokyo. Help Yourself is my one-person studio making simple, fun games.” Navigation says Support; the games heading says Games. Support is headed “Thanks for playing.” and says “If you like the games and want to say thanks, you can throw me a tip.” followed by “Tip jar coming soon.” No payment URL is configured.
 
 ## Evidence on Hand
 - User-supplied help-yourself-build-assets.zip, retained assets under design/source-assets and docs/assets.
