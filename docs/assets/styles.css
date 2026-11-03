@@ -131,6 +131,7 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
   .header-rule { top: 73px; }
   .hero { width: 270px; padding-top: 100px; }
   .mascot { height: 281.75px; }
+  .home .mascot { z-index: 11; }
   .wordmark { width: 270px; }
   .game-list { grid-template-columns: 1fr; gap: 60px; width: calc(100% - 48px); margin-top: 64px; text-align: center; }
   .game-preview { width: 100%; }
