@@ -22,7 +22,7 @@ Use the user-supplied asset pack and homepage reference. Preserve the hot-dog ma
 
 Page H1 headings use custom SVG path artwork matching the approved lettering, with real HTML text retained for accessibility. Do not replace this lettering with a live display font.
 
-Interior pages should stay simple and clean, with pithy messaging and minimal repeated content. The approved homepage remains the reference for its own composition.
+Interior pages should stay simple and clean, with left-aligned headings and copy, pithy messaging, and minimal repeated content. The approved homepage remains the reference for its own composition.
 
 ## Evidence on Hand
 - User-supplied help-yourself-build-assets.zip, retained assets under design/source-assets and docs/assets.
