@@ -71,19 +71,18 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .header-rule { position: absolute; inset: 76px 0 auto; }
 .home .site-header { background: transparent; }
 .home.brand-visible .site-header { background: var(--color-paper); }
-.hero { position: relative; z-index: 11; width: min(310px, 65vw); margin: 0 auto; padding-top: 34px; text-align: center; }
-.mascot { height: 270px; width: auto; margin: 0 auto 5px; }
+.hero { position: relative; width: min(310px, 65vw); margin: 0 auto; padding-top: 34px; text-align: center; }
+.mascot { position: relative; z-index: 11; height: 310.5px; width: auto; margin: 0 auto 5px; }
 .hero h1 { margin: 0; }
 .wordmark { width: 310px; }
-.game-list { margin: 25px auto 0; padding: 0 24px; text-align: center; }
-.game-preview { margin: 0 auto 72px; }
-.game-preview:last-child { margin-bottom: 0; }
-.game-link { display: inline-block; text-decoration: none; }
+.game-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 64px; width: min(720px, calc(100% - 64px)); margin: 72px auto 0; text-align: left; }
+.game-preview { min-width: 0; scroll-margin-top: 0; }
 .game-art { width: 230px; height: 230px; border-radius: 50%; object-fit: cover; }
-.game-preview .game-art { margin: 0 auto 8px; }
-.game-preview h3 { margin: 0; font-size: 30px; }
-.game-link:hover h3 { text-decoration: underline; text-underline-offset: 0.14em; }
-.game-preview p { margin: 4px auto 0; font-size: 19px; }
+.game-preview .game-art { width: 160px; height: 160px; margin: 0 0 16px; }
+.game-preview h3 { margin: 0 0 8px; font-size: 30px; }
+.game-preview p { max-width: 28ch; margin: 0 0 12px; font-size: 17px; }
+.game-preview p:not(.availability) { min-height: 3em; }
+.game-preview .availability { color: var(--color-relish-dark); font-size: 16px; font-weight: 700; margin-bottom: 0; }
 .promise { max-width: 800px; margin: 72px auto 0; padding: 0 24px; text-align: center; }
 .promise h2 { margin: 0 0 18px; }
 .promise h2 img { width: 260px; margin: 0 auto; }
@@ -118,13 +117,6 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .privacy-copy h2 { font-family: var(--font-body); font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
 .privacy-copy h2:first-child { margin-top: 0; }
 .privacy-copy p { margin-bottom: 20px; overflow-wrap: anywhere; }
-.game-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 64px; max-width: 720px; margin-inline: auto; }
-.game-detail { text-align: left; scroll-margin-top: 130px; }
-.game-detail .game-art { width: 160px; height: 160px; margin: 0 0 16px; }
-.game-detail h2 { font-size: 30px; margin: 0 0 8px; }
-.game-detail p { max-width: 28ch; margin: 0 0 12px; font-size: 17px; }
-.game-detail p:not(.availability) { min-height: 3em; }
-.game-detail .availability, .game-preview .availability { color: var(--color-relish-dark); font-size: 16px; font-weight: 700; margin-bottom: 0; }
 @media (max-width: 640px) {
   :root { font-size: 17px; }
   .header-inner { width: calc(100% - 32px); height: 73px; gap: 12px; }
@@ -133,13 +125,15 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
   nav a { font-size: 15px; }
   .header-rule { top: 73px; }
   .hero { width: 270px; padding-top: 100px; }
-  .mascot { height: 245px; }
+  .mascot { height: 281.75px; }
   .wordmark { width: 270px; }
-  .game-list { margin-top: 32px; }
-  .game-preview { margin-bottom: 60px; }
+  .game-list { grid-template-columns: 1fr; gap: 60px; width: calc(100% - 48px); margin-top: 64px; text-align: center; }
   .game-art { width: 220px; height: 220px; }
+  .game-preview .game-art { width: 220px; height: 220px; margin: 0 auto 8px; }
   .game-preview h3 { font-size: 29px; }
-  .game-preview p { font-size: 17px; }
+  .game-preview p { margin: 4px auto 0; font-size: 17px; }
+  .game-preview p:not(.availability) { min-height: 0; }
+  .game-preview .availability { font-size: 16px; }
   .promise { margin-top: 64px; padding-inline: 24px; }
   .promise p { font-size: 20px; }
   .desktop-break { display: none; }
@@ -155,13 +149,6 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
   .pie-character { height: 200px; }
   .bank-character { height: 180px; }
   .promise-lines { font-size: 18px; }
-  .game-details { grid-template-columns: 1fr; gap: 32px; max-width: 420px; margin-inline: 0; }
-  .game-detail { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 20px; align-items: center; text-align: left; }
-  .game-detail .game-art { width: 96px; height: 96px; margin: 0; }
-  .game-detail h2 { font-size: 26px; }
-  .game-detail p { margin: 0 0 8px; font-size: 16px; }
-  .game-detail p:not(.availability) { min-height: 0; }
-  .game-detail .availability { font-size: 14px; }
 }
 @media (max-width: 360px) {
   .small-brand { width: 60px; flex-basis: 60px; }

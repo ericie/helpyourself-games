@@ -27,7 +27,7 @@ Open http://localhost:8000. Stop the server with `Ctrl+C`.
 ```text
 docs/                 Public website (GitHub Pages requires this folder name)
   index.html          Home: brand, game lineup, and My Promise
-  games/index.html    Game descriptions and availability
+  games/index.html    Redirect to the homepage games section
   about/index.html    About Help Yourself
   support/index.html  Support information (payment link pending)
   privacy/index.html  Website privacy information
@@ -50,6 +50,12 @@ Add a directory with its own `index.html`, such as `docs/about/index.html` for
 and the future custom domain. From a nested page, load shared styles with
 `../assets/styles.css` and link home with `../`.
 
+Games navigation and About’s Meet the games link target the homepage `#games`
+section. It uses two left-aligned columns on desktop and one centered column at
+640px and below. Game entries are static, with stable IDs and Coming Soon status.
+The former `/games/` page redirects to `../#games`; its script preserves recognized
+game fragments, with a meta refresh and direct link as fallbacks.
+
 ## Publish changes
 
 ```sh
@@ -64,7 +70,7 @@ under the repository's **Actions** tab. Hosting settings are under
 
 ## Before launch
 
-- Keep all four games marked **Coming Soon** on the home and games pages until
+- Keep all four games marked **Coming Soon** in the homepage lineup until
   the App Store account is ready and real release URLs are supplied.
 - Add the payment destination in `docs/support/index.html`; no provider or
   checkout is configured yet.
@@ -94,14 +100,14 @@ details are recorded in [design/asset-sources.json](design/asset-sources.json).
 Lato supplies body copy and Lilita One supplies live H2/H3 text. Both are
 self-hosted, with their SIL Open Font Licenses in `docs/assets/fonts/`.
 
-Visible H1s use path artwork rather than a live font. The current Games H1,
-My Promise H2, and Thanks for playing. H1 come from
+Visible H1s use path artwork rather than a live font. The current My Promise H2
+and Thanks for playing. H1, plus the retained Games artwork, come from
 `design/generated/solo-studio-lettering-sheet.png` and its adjacent `.prompt.txt`
 file. Their traced assets are `docs/assets/headings/games.svg` (883×264),
 `my-promise.svg` (1339×289), and `thanks-for-playing.svg` (1487×222).
 About, Privacy, and Page not found retain lettering generated in
-`design/generated/heading-lettering-sheet.png`. The older Our games, Our Promise,
-and Help us keep playing. lettering remains as historical source material.
+`design/generated/heading-lettering-sheet.png`. The unused Games H1 and older Our games, Our Promise,
+and Help us keep playing. lettering remain as historical source material.
 The 404 page includes its paths inline so it remains self-contained. The home H1
 and compact header use the traced supplied wordmark. None of these lettering SVGs
 embeds a bitmap or uses an SVG text element.
@@ -114,9 +120,9 @@ the heading twice. For example, on a nested page using the shared stylesheet:
 
 ```html
 <h1 class="lettered-heading">
-  <span class="visually-hidden">Games</span>
-  <img class="heading-art" src="../assets/headings/games.svg"
-       alt="" aria-hidden="true" width="883" height="264">
+  <span class="visually-hidden">Thanks for playing.</span>
+  <img class="heading-art" src="../assets/headings/thanks-for-playing.svg"
+       alt="" aria-hidden="true" width="1487" height="222">
 </h1>
 ```
 

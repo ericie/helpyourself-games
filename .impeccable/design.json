@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-03T11:29:20.772352+00:00",
+  "generatedAt": "2026-11-03T11:40:31.670366+00:00",
   "title": "Design System: Help Yourself",
   "extensions": {
     "colorMeta": {
@@ -36,7 +36,7 @@
       },
       "title": {
         "displayName": "Section and preview title",
-        "purpose": "Live Lilita One for desktop homepage game titles and interior gallery H2s (30px); gallery H2s become 26px at 640px and below. Visible H1s remain SVG path artwork."
+        "purpose": "Live Lilita One for homepage game H3s: 30px on desktop, 29px at 640px and below. Visible page H1s remain SVG path artwork."
       },
       "body": {
         "displayName": "Body copy",
@@ -117,12 +117,12 @@
       "css": ".ds-text-link{font-family:var(--font-body,Lato,sans-serif);font-size:18px;line-height:1.5;color:var(--color-ink,#232323);text-decoration:underline;text-underline-offset:.22em}.ds-text-link:hover{text-decoration-thickness:2px}.ds-text-link:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-text-link{font-size:17px}}"
     },
     {
-      "name": "Game title link",
+      "name": "Game preview text",
       "kind": "custom",
-      "refersTo": "game-title-link",
-      "description": "Title portion of the homepage preview link; the interior gallery uses static headings and smaller circular artwork.",
-      "html": "<a class=\"ds-game-link\" href=\"#arrow-strum\"><h3>Arrow Strum</h3></a>",
-      "css": ".ds-game-link{display:inline-block;color:var(--color-ink,#232323);text-decoration:none}.ds-game-link h3{font-family:var(--font-display,\"Lilita One\",sans-serif);font-weight:400;font-size:30px;line-height:1.1;text-wrap:balance;margin:0}.ds-game-link:hover h3{text-decoration:underline;text-underline-offset:.14em}.ds-game-link:focus-visible{outline:3px solid var(--color-relish,#247327);outline-offset:6px;border-radius:3px;}@media(max-width:640px){.ds-game-link h3{font-size:29px}}"
+      "refersTo": "game-preview",
+      "description": "Static text portion of a homepage game article; the full entry includes its real circular PNG artwork. No interactive states.",
+      "html": "<article class=\"ds-game-preview\" aria-labelledby=\"ds-arrow-strum-title\"><h3 id=\"ds-arrow-strum-title\">Arrow Strum</h3><p>Find your way, one arrow at a time.</p><p class=\"ds-availability\">Coming Soon</p></article>",
+      "css": ".ds-game-preview{font-family:var(--font-body,Lato,sans-serif);line-height:1.5;color:var(--color-ink,#232323);text-align:left}.ds-game-preview h3{font-family:var(--font-display,\"Lilita One\",sans-serif);font-size:30px;font-weight:400;line-height:1.1;margin:0 0 8px;text-wrap:balance}.ds-game-preview p{max-width:28ch;font-size:17px;margin:0 0 12px}.ds-game-preview p:not(.ds-availability){min-height:3em}.ds-game-preview .ds-availability{font-size:16px;font-weight:700;color:var(--color-relish-dark,#19531c);margin-bottom:0}@media(max-width:640px){.ds-game-preview{text-align:center}.ds-game-preview h3{font-size:29px}.ds-game-preview p{margin:4px auto 0}.ds-game-preview p:not(.ds-availability){min-height:0}}"
     },
     {
       "name": "Skip link",
@@ -135,7 +135,7 @@
   ],
   "narrative": {
     "northStar": "Help Yourself",
-    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark preserved as traced SVG paths, generated My Promise and page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open and readable, with playful display type and plain body copy. Copy speaks in Eric’s approved I/me voice for his one-person studio. About’s supplied pie character and Support’s generated coin-bank character accompany the short interior stories. The homepage keeps its centered composition. Interior pages follow the user-approved preference for left-aligned headings and copy, simple layouts, and pithy messaging: brief stories, a compact games gallery, and a plain privacy reading column.",
+    "overview": "This document records the current implementation and inherited visual decisions, rather than a new identity proposal. Its visual authority is the supplied [homepage concept](design/source-assets/reference/homepage-approved-concept.png); exact implementation values come from [the stylesheet](docs/assets/styles.css).\n\nThe hot-dog mascot, supplied two-line wordmark preserved as traced SVG paths, generated My Promise and page-heading path artwork, and mustard separators carry the identity. Warm ivory and charcoal give the colorful game icons room, with relish green reserved for prominent actions and selected supporting text. The layout is open and readable, with playful display type and plain body copy. Copy speaks in Eric’s approved I/me voice for his one-person studio. About’s supplied pie character and Support’s generated coin-bank character accompany the short interior stories. The homepage keeps its centered brand and promise, with a two-column, left-aligned games gallery on desktop and a centered single-column lineup on mobile. Interior pages follow the user-approved preference for left-aligned headings and copy, simple layouts, and pithy messaging: brief stories and a plain privacy reading column. The homepage now supplies the single games destination.",
     "keyCharacteristics": [
       "Supplied mascot and lettering, with custom SVG path artwork for visible H1s.",
       "Warm ivory canvas, charcoal text, mustard separators, and relish actions.",

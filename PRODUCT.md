@@ -12,13 +12,13 @@ Plain static HTML, CSS, and a small progressive-enhancement script. GitHub Pages
 A small website serving HelpYourself.games, introducing the games and Eric’s one-person studio. Eric is an American living in Tokyo.
 
 ## Capabilities and Constraints
-Confirmed game lineup: Arrow Strum, Bus Bash, Block Breaker, Timber Tumble.
+Confirmed game lineup: Arrow Strum, Bus Bash, Block Breaker, Timber Tumble. The homepage’s #games section is the single games destination for now, using two columns on desktop and one centered column on mobile. The former /games/ page redirects there and preserves recognized game bookmarks.
 All four games must display “Coming Soon” until the user has set up the App Store account and provides release links.
 The user-owned custom domain helpyourself.games is connected to GitHub Pages. The www hostname redirects to the primary domain. Preserve the Namecheap Private Email MX and DKIM records when changing website DNS.
 Game store URLs and the support payment destination are not yet supplied. Do not invent download links or payment providers.
 
 ## Brand Commitments
-Use the user-supplied asset pack and homepage reference. Preserve the hot-dog mascot, custom Help Yourself lettering, mustard separators, single-column game lineup, and the promise of no ads, no in-app purchases, and no selling player data. The user-approved first-person My Promise copy supersedes the supplied Our Promise wording; retain the original assets as historical sources.
+Use the user-supplied asset pack and homepage reference. Preserve the hot-dog mascot, custom Help Yourself lettering, mustard separators, the four-game lineup, and the promise of no ads, no in-app purchases, and no selling player data. The user-approved first-person My Promise copy supersedes the supplied Our Promise wording; retain the original assets as historical sources.
 
 Page H1 headings use custom SVG path artwork matching the approved lettering, with real HTML text retained for accessibility. Do not replace this lettering with a live display font.
 
