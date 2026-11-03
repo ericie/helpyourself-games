@@ -72,7 +72,8 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .home .site-header { background: transparent; }
 .home.brand-visible .site-header { background: var(--color-paper); }
 .hero { position: relative; width: min(310px, 65vw); margin: 0 auto; padding-top: 34px; text-align: center; }
-.mascot { position: relative; z-index: 11; height: 310.5px; width: auto; margin: 0 auto 5px; }
+.mascot-filter { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
+.mascot { position: relative; z-index: 11; height: 310.5px; width: auto; margin: 0 auto 22px; }
 .hero h1 { margin: 0; }
 .wordmark { width: 310px; }
 .game-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 64px; width: min(720px, calc(100% - 64px)); margin: 72px auto 0; text-align: left; }
