@@ -69,13 +69,17 @@ nav a { min-height: 44px; display: inline-flex; align-items: center; gap: 4px; t
 nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .header-rule, .footer-rule { height: 24px; background: url("brand/mustard-line.svg?v=2") left center / 1200px 24px repeat-x; }
 .header-rule { position: absolute; inset: 76px 0 auto; }
-.home .site-header { background: transparent; }
-.home.brand-visible .site-header { background: var(--color-paper); }
+.home .site-header { position: static; height: 0; z-index: auto; background: transparent; }
+.home .header-inner { position: fixed; top: 0; left: 50%; z-index: 12; transform: translateX(-50%); background: var(--color-paper); }
+.home .header-rule { position: fixed; z-index: 10; background-color: var(--color-paper); }
 .hero { position: relative; width: min(310px, 65vw); margin: 0 auto; padding-top: 34px; text-align: center; }
-.mascot-filter { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
+.brand-filter { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
 .mascot { position: relative; z-index: 11; height: 310.5px; width: auto; margin: 0 auto 22px; }
+.home .mascot { z-index: 13; }
+.home.mascot-scrolled .mascot { visibility: hidden; }
 .hero h1 { margin: 0; }
-.wordmark { width: 310px; }
+.wordmark { position: relative; z-index: 11; width: 310px; }
+.home.brand-visible .wordmark { visibility: hidden; }
 .game-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 64px; width: min(720px, calc(100% - 64px)); margin: 72px auto 0; text-align: left; }
 .game-preview { width: 260px; max-width: 100%; min-width: 0; justify-self: center; text-align: center; scroll-margin-top: 0; }
 .game-art { width: 230px; height: 230px; border-radius: 50%; object-fit: cover; }

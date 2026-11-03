@@ -9,9 +9,9 @@
   <meta property="og:description" content="Simple, fun games. No ads, no in-app purchases, and no selling your data. Meet Arrow Strum, Bus Bash, Block Breaker, and Timber Tumble.">
   <meta property="og:type" content="website">
   <title>Help Yourself — Simple, fun games</title>
-  <link rel="stylesheet" href="assets/styles.css?v=12">
+  <link rel="stylesheet" href="assets/styles.css?v=13">
   <link rel="preload" href="assets/fonts/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <script src="assets/site.js?v=2" defer></script>
+  <script src="assets/site.js?v=3" defer></script>
 </head>
 <body class="home">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,9 +28,9 @@
   </header>
   <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="brand-title">
-      <svg class="mascot-filter" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <svg class="brand-filter" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <filter id="mascot-clearance" x="-25%" y="-25%" width="150%" height="150%" primitiveUnits="userSpaceOnUse">
+          <filter id="brand-clearance" x="-25%" y="-25%" width="150%" height="150%" primitiveUnits="userSpaceOnUse">
             <feMorphology in="SourceAlpha" operator="dilate" radius="14" result="outline"/>
             <feFlood flood-color="var(--color-paper)"/>
             <feComposite in2="outline" operator="in"/>
@@ -38,8 +38,8 @@
           </filter>
         </defs>
       </svg>
-      <img class="mascot" src="assets/brand/hot-dog-mascot.png" alt="" width="510" height="775" fetchpriority="high" style="filter: url(#mascot-clearance)">
-      <h1 id="brand-title"><span class="visually-hidden">Help Yourself</span><img class="wordmark" src="assets/brand/help-yourself-wordmark.svg" width="692" height="292" alt="" aria-hidden="true"></h1>
+      <img class="mascot" src="assets/brand/hot-dog-mascot.png" alt="" width="510" height="775" fetchpriority="high" style="filter: url(#brand-clearance)">
+      <h1 id="brand-title"><span class="visually-hidden">Help Yourself</span><img class="wordmark" src="assets/brand/help-yourself-wordmark.svg" style="filter: url(#brand-clearance)" width="692" height="292" alt="" aria-hidden="true"></h1>
     </section>
     <section class="game-list" id="games" aria-labelledby="games-title">
       <h2 class="visually-hidden" id="games-title">Games</h2>
