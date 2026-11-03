@@ -51,7 +51,7 @@ and the future custom domain. From a nested page, load shared styles with
 `../assets/styles.css` and link home with `../`.
 
 Games navigation and About’s Meet the games link target the homepage `#games`
-section. It uses two left-aligned columns on desktop and one centered column at
+section. It uses two columns with centered game artwork and captions on desktop and one centered column at
 640px and below. Game entries are static, with stable IDs and Coming Soon status.
 The former `/games/` page redirects to `../#games`; its script preserves recognized
 game fragments, with a meta refresh and direct link as fallbacks.

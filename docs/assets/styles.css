@@ -77,11 +77,11 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .hero h1 { margin: 0; }
 .wordmark { width: 310px; }
 .game-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 64px; width: min(720px, calc(100% - 64px)); margin: 72px auto 0; text-align: left; }
-.game-preview { width: 260px; max-width: 100%; min-width: 0; justify-self: center; scroll-margin-top: 0; }
+.game-preview { width: 260px; max-width: 100%; min-width: 0; justify-self: center; text-align: center; scroll-margin-top: 0; }
 .game-art { width: 230px; height: 230px; border-radius: 50%; object-fit: cover; }
 .game-preview .game-art { width: 160px; height: 160px; margin: 0 auto 16px; }
 .game-preview h3 { margin: 0 0 8px; font-size: 30px; }
-.game-preview p { max-width: 28ch; margin: 0 0 12px; font-size: 17px; }
+.game-preview p { max-width: 28ch; margin: 0 auto 12px; font-size: 17px; }
 .game-preview p:not(.availability) { min-height: 3em; }
 .game-preview .availability { color: var(--color-relish-dark); font-size: 16px; font-weight: 700; margin-bottom: 0; }
 .promise { max-width: 800px; margin: 72px auto 0; padding: 0 24px; text-align: center; }
