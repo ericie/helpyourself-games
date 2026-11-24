@@ -28,6 +28,7 @@ Open http://localhost:8000. Stop the server with `Ctrl+C`.
 docs/                 Public website (GitHub Pages requires this folder name)
   index.html          Home: brand, game lineup, and My Promise
   games/index.html    Redirect to the homepage games section
+  arrow-strum/        Arrow Strum: game page, App Store support and privacy
   about/index.html    About Help Yourself
   support/index.html  Support information (payment link pending)
   privacy/index.html  Website privacy information
@@ -52,7 +53,8 @@ and the future custom domain. From a nested page, load shared styles with
 
 Games navigation and About’s Meet the games link target the homepage `#games`
 section. It uses two columns with centered game artwork and captions on desktop and one centered column at
-640px and below. Game entries are static, with stable IDs and Coming Soon status.
+640px and below. Game entries have stable IDs and Coming Soon status; Arrow Strum’s title links
+to its page, and the others are static.
 The former `/games/` page redirects to `../#games`; its script preserves recognized
 game fragments, with a meta refresh and direct link as fallbacks.
 

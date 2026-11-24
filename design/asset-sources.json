@@ -5,6 +5,7 @@
     "docs/assets/brand/help-yourself-wordmark.png": "assets/brand/help-yourself-wordmark.png",
     "docs/assets/brand/our-promise.png": "assets/brand/our-promise.png",
     "docs/assets/characters/cherry-pie.png": "assets/characters/cherry-pie.png",
+    "docs/assets/brand/mustard-header.svg": "The same mustard-line path with a paper fill above it, for the header",
     "docs/assets/brand/mustard-line.svg": "assets/brand/mustard-line.svg (preserveAspectRatio adjusted for layout; endpoints matched in position and tangent for seamless repetition)"
   },
   "existingGameWorkspace": {
@@ -55,5 +56,24 @@
     "prompt": "design/generated/coin-bank-character.prompt.txt",
     "method": "Native image generation with transparent background, matching the supplied character style. Original generated PNG preserved with its exact prompt embedded.",
     "description": "Anthropomorphic piggy bank putting a gold coin into its own slot while holding more coins."
+  },
+  "arrowStrumPage": {
+    "screenshots": {
+      "docs/assets/games/arrow-strum/easy-heart.webp": "apps/arrow_maze/store/screenshots/ranks/board-1-easy-heart.png",
+      "docs/assets/games/arrow-strum/medium-duck.webp": "apps/arrow_maze/store/screenshots/ranks/board-2-medium-duck.png",
+      "docs/assets/games/arrow-strum/hard-octopus.webp": "apps/arrow_maze/store/screenshots/ranks/board-3-hard-octopus.png",
+      "docs/assets/games/arrow-strum/very-hard-snowman.webp": "apps/arrow_maze/store/screenshots/ranks/board-4-veryHard-snowman.png",
+      "docs/assets/games/arrow-strum/ultra-hard-guitar.webp": "apps/arrow_maze/store/screenshots/ranks/board-5-ultraHard-guitar.png",
+      "docs/assets/games/arrow-strum/impossible-ghost.webp": "apps/arrow_maze/store/screenshots/ranks/board-6-basicallyImpossible-ghost.png",
+      "docs/assets/games/arrow-strum/cleared.webp": "apps/arrow_maze/store/screenshots/iphone-medium/4-cleared.png",
+      "docs/assets/games/arrow-strum/achievements.webp": "apps/arrow_maze/store/screenshots/iphone-medium/5-achievements.png"
+    },
+    "screenshotProcessing": "Resized to 400px or 520px wide WebP, with a 960px wide -large copy for the enlarged view. The single black capture pixel at the top-left corner is filled from its neighbor.",
+    "board": "Level 13, and the CampaignScore that Autoplay performs, exported from apps/arrow_maze/lib/engine.",
+    "lettering": {
+      "asset": "docs/assets/headings/arrow-strum.svg",
+      "source": "design/generated/arrow-strum-lettering.png",
+      "method": "Letterforms from both approved sheets composed by design/compose-arrow-strum.py, then traced with vtracer 0.6.15. The w is an inverted m; the S is the Games s scaled to cap height."
+    }
   }
 }

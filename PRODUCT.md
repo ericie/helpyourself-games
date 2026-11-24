@@ -12,7 +12,7 @@ Plain static HTML, CSS, and a small progressive-enhancement script. GitHub Pages
 A small website serving HelpYourself.games, introducing the games and Eric’s one-person studio. Eric is an American living in Tokyo.
 
 ## Capabilities and Constraints
-Confirmed game lineup: Arrow Strum, Bus Bash, Block Breaker, Timber Tumble. The homepage’s #games section is the single games destination for now, using two columns on desktop and one centered column on mobile. The former /games/ page redirects there and preserves recognized game bookmarks.
+Confirmed game lineup: Arrow Strum, Bus Bash, Block Breaker, Timber Tumble. The homepage’s #games section is the single games destination for now, using two columns on desktop and one centered column on mobile. The former /games/ page redirects there and preserves recognized game bookmarks. Arrow Strum has its own page at /arrow-strum/, linked from its homepage title, with /arrow-strum/support/ and /arrow-strum/privacy/ serving as its App Store support and privacy URLs. Its privacy wording is the publisher's own, verbatim from the app; change both together.
 All four games must display “Coming Soon” until the user has set up the App Store account and provides release links.
 The user-owned custom domain helpyourself.games is connected to GitHub Pages. The www hostname redirects to the primary domain. Preserve the Namecheap Private Email MX and DKIM records when changing website DNS.
 Game store URLs and the support payment destination are not yet supplied. Do not invent download links or payment providers.

@@ -58,7 +58,7 @@ p { margin: 0 0 1.2em; text-wrap: pretty; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .skip-link { position: fixed; top: 12px; left: 16px; z-index: 30; padding: 12px 20px; background: var(--color-paper); transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
-.site-header { position: fixed; inset: 0 0 auto; z-index: 10; height: 100px; background: var(--color-paper); }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 10; height: 77px; background: var(--color-paper); }
 .header-inner { width: min(var(--width-site), calc(100% - 64px)); height: 77px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .small-brand { display: block; width: 94px; flex: 0 0 94px; transition: opacity 180ms ease-out; }
 .small-brand img { width: 100%; }
@@ -68,10 +68,11 @@ nav { display: flex; align-items: center; gap: 26px; }
 nav a { min-height: 44px; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; font-size: 16px; }
 nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .header-rule, .footer-rule { height: 24px; background: url("brand/mustard-line.svg?v=2") left center / 1200px 24px repeat-x; }
-.header-rule { position: absolute; inset: 76px 0 auto; }
+/* Paper above the wave, see-through below it, so the page scrolls right up to the mustard. */
+.header-rule { position: absolute; inset: 76px 0 auto; background-image: url("brand/mustard-header.svg"); pointer-events: none; }
 .home .site-header { position: static; height: 0; z-index: auto; background: transparent; }
 .home .header-inner { position: fixed; top: 0; left: 50%; z-index: 12; transform: translateX(-50%); background: var(--color-paper); }
-.home .header-rule { position: fixed; z-index: 10; background-color: var(--color-paper); }
+.home .header-rule { position: fixed; z-index: 10; }
 .hero { position: relative; width: min(310px, 65vw); margin: 0 auto; padding-top: 34px; text-align: center; }
 .brand-filter { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
 .mascot { position: relative; z-index: 11; height: 310.5px; width: auto; margin: 0 auto 22px; }
@@ -87,6 +88,10 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .game-preview h3 { margin: 0 0 8px; font-size: 30px; }
 .game-preview p { max-width: 28ch; margin: 0 auto 12px; font-size: 17px; }
 .game-preview p:not(.availability) { min-height: 3em; }
+.game-preview h3 a { text-decoration: none; }
+.game-preview h3 a:hover { text-decoration: underline; }
+.game-preview:has(h3 a) { position: relative; }
+.game-preview h3 a::after { content: ""; position: absolute; inset: 0; }
 .game-preview .availability { color: var(--color-relish-dark); font-size: 16px; font-weight: 700; margin-bottom: 0; }
 .promise { max-width: 800px; margin: 72px auto 0; padding: 0 24px; text-align: center; }
 .promise h2 { margin: 0 0 18px; }
@@ -122,12 +127,70 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
 .privacy-copy h2 { font-family: var(--font-body); font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
 .privacy-copy h2:first-child { margin-top: 0; }
 .privacy-copy p { margin-bottom: 20px; overflow-wrap: anywhere; }
+:root:has(.game-page) { scrollbar-color: auto; }
+.game-page { width: 100%; padding-top: 76px; }
+.game-hero, .game-section { width: min(var(--width-site), calc(100% - 64px)); margin-inline: auto; }
+/* Level 13 on the game’s own Easy green, which starts behind the header’s wave. */
+.game-banner { padding: 56px 0 28px; background: #286e0c; color: var(--color-paper); }
+.game-banner ::selection { color: #286e0c; background: var(--color-paper); }
+.game-banner .heading-art { width: min(100%, 420px); height: auto; filter: brightness(0) invert(1); }
+.game-page .game-banner .availability { color: inherit; }
+.game-page h2 { margin: 0 0 12px; font-size: 30px; }
+.game-page p { max-width: 60ch; }
+.game-hero, .game-split { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 64px; }
+.game-hero { align-items: center; }
+.game-intro h1 { margin: 0 0 28px; }
+.game-page .availability { margin: 0; color: var(--color-relish-dark); font-weight: 700; }
+.game-section { margin-top: var(--space-large); }
+/* The board keeps the game’s own line weight, hint blue, and yellow bump. */
+.board { display: block; width: 100%; height: auto; overflow: hidden; fill: none; stroke: #fff; stroke-width: .16; stroke-linecap: round; stroke-linejoin: round; touch-action: manipulation; }
+.board .arrow { cursor: pointer; outline: none; }
+.board .hit { stroke: transparent; stroke-width: .9; pointer-events: stroke; }
+.board .leaving { pointer-events: none; }
+.board .bumped { stroke: #ffd166; }
+.board .arrow:hover .line { stroke-width: .22; }
+.board .arrow:focus-visible .line { stroke: #7bd1e8; stroke-width: .24; }
+.board-controls { position: relative; display: flex; align-items: center; justify-content: center; }
+.game-page .board-prompt { margin: 0 8px 0 0; font-weight: 700; }
+.board-controls[hidden] { display: none; }
+.icon-button { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; background: none; color: inherit; font-size: 24px; cursor: pointer; }
+.icon-button:hover { color: #ffd166; }
+.icon-button:focus-visible { outline: 3px solid var(--color-paper); border-radius: 3px; }
+.stop-icon, .playing .play-icon { display: none; }
+.playing .stop-icon { display: inline; }
+.rank-list { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; margin: 28px 0 0; padding: 0; list-style: none; }
+.rank-list span { display: block; margin-top: 10px; font-size: 16px; font-weight: 700; line-height: 1.25; text-align: center; }
+.screen { width: 100%; border-radius: 10% / 4.6%; }
+.shot { display: block; text-decoration: none; cursor: zoom-in; }
+.shot:hover span { text-decoration: underline; }
+.viewer { width: 100%; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; border: 0; overflow: hidden; background: var(--color-paper); color: var(--color-ink); }
+.viewer[open] { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+.viewer img { width: auto; height: auto; max-width: calc(100vw - 144px); max-height: calc(100svh - 96px); aspect-ratio: 960 / 2087; border-radius: 5% / 2.3%; touch-action: pan-y pinch-zoom; }
+.game-page .viewer-caption { min-height: 1.5em; margin: 0; font-weight: 700; }
+.viewer-button { position: absolute; display: grid; place-items: center; width: 52px; height: 52px; padding: 0; border: 0; border-radius: 50%; color: inherit; background: none; font-size: 24px; cursor: pointer; }
+.viewer-button:hover { color: var(--color-relish); }
+.viewer-button:focus-visible { outline: 3px solid var(--color-relish); }
+.viewer-close { top: 16px; right: 16px; }
+.viewer-previous, .viewer-next { top: calc(50% - 26px); }
+.viewer-previous { left: max(16px, calc(50% - 380px)); }
+.viewer-next { right: max(16px, calc(50% - 380px)); }
+.game-split { align-items: center; }
+.game-split section + section { margin-top: 40px; }
+.screen-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.game-page .game-links { display: flex; flex-wrap: wrap; gap: 8px 28px; max-width: var(--width-site); margin-bottom: 0; font-size: 16px; }
+@media (max-width: 900px) {
+  .game-hero, .game-split { grid-template-columns: 1fr; gap: 40px; }
+  .board-demo, .screen-pair { width: 100%; max-width: 460px; }
+  .game-hero { gap: 16px; }
+  .rank-list { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 560px; }
+}
 @media (max-width: 640px) {
   :root { font-size: 17px; }
   .header-inner { width: calc(100% - 32px); height: 73px; gap: 12px; }
   .small-brand { width: 70px; flex-basis: 70px; }
   nav { gap: 17px; }
   nav a { font-size: 15px; }
+  .site-header { height: 74px; }
   .header-rule { top: 73px; }
   .hero { width: 270px; padding-top: 100px; }
   .mascot { height: 281.75px; }
@@ -156,6 +219,20 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
   .pie-character { height: 200px; }
   .bank-character { height: 180px; }
   .promise-lines { font-size: 18px; }
+  .game-page { width: 100%; padding-top: 73px; }
+  .game-hero, .game-section { width: calc(100% - 40px); }
+  .game-banner { padding: 60px 0 16px; }
+  .game-banner .heading-art { width: min(100%, 320px); }
+  .game-page h2 { font-size: 29px; }
+  .game-section { margin-top: 60px; }
+  .rank-list { gap: 20px 14px; }
+  .screen-pair { gap: 14px; }
+  .viewer[open] { justify-content: flex-start; padding-top: 64px; }
+  .viewer img { max-width: calc(100vw - 40px); max-height: calc(100svh - 144px); }
+  .viewer-close { top: 6px; right: 8px; }
+  .viewer-previous, .viewer-next { top: auto; bottom: 12px; }
+  .viewer-previous { left: 16px; }
+  .viewer-next { right: 16px; }
 }
 @media (max-width: 360px) {
   .small-brand { width: 60px; flex-basis: 60px; }

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free every arrow and play the whole board like a harp. A musical puzzle with 100 levels, no ads, and no in-app purchases.">
+  <meta name="theme-color" content="#fffdf5">
+  <meta property="og:title" content="Arrow Strum — Help Yourself">
+  <meta property="og:description" content="Free every arrow and play the whole board like a harp. A musical puzzle with 100 levels, no ads, and no in-app purchases.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://helpyourself.games/assets/games/arrow-strum.png">
+  <title>Arrow Strum — Help Yourself</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=23">
+  <link rel="preload" href="../assets/fonts/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <script src="../assets/site.js?v=3" defer></script>
+  <script src="../assets/arrow-strum.js?v=7" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="small-brand" href="../" aria-label="Help Yourself home"><img src="../assets/brand/help-yourself-wordmark.svg" width="692" height="292" alt="Help Yourself"></a>
+      <nav aria-label="Main navigation">
+        <a href="../#games">Games</a>
+        <a href="../about/">About</a>
+        <a class="support-link" href="../support/">Support <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </nav>
+    </div>
+    <div class="header-rule" aria-hidden="true"></div>
+  </header>
+  <main id="main" class="interior game-page" tabindex="-1">
+    <div class="game-banner">
+     <div class="game-hero">
+      <div class="game-intro">
+        <h1 class="lettered-heading"><span class="visually-hidden">Arrow Strum</span><img class="heading-art" src="../assets/headings/arrow-strum.svg" alt="" aria-hidden="true" width="3417" height="537"></h1>
+        <p class="page-lead">Tap an arrow and it slides off the board, plucking a note as it goes. But only if nothing stands in its way. Relax and enjoy with this low-key spatial puzzle game.</p>
+        <p class="availability">Coming Soon to iPhone</p>
+      </div>
+      <div class="board-demo" id="board-demo">
+        <svg class="board" viewBox="-1 -1 13 12" role="img" aria-label="A heart-shaped Arrow Strum board made of 19 white arrows.">
+          <path data-arrow="6,0 R4" d="M6 0 10 0M9.66 0.34 10 0 9.66 -0.34"/>
+          <path data-arrow="5,5 U5" d="M5 5 5 0M5.34 0.34 5 0 4.66 0.34"/>
+          <path data-arrow="4,6 D3 R3" d="M4 6 4 9 7 9M6.66 9.34 7 9 6.66 8.66"/>
+          <path data-arrow="10,6 L1 D2 L1 U1 L1 D1" d="M10 6 9 6 9 8 8 8 8 7 7 7 7 8M6.66 7.66 7 8 7.34 7.66"/>
+          <path data-arrow="7,5 U4" d="M7 5 7 1M7.34 1.34 7 1 6.66 1.34"/>
+          <path data-arrow="4,3 U3" d="M4 3 4 0M4.34 0.34 4 0 3.66 0.34"/>
+          <path data-arrow="0,3 D2 R4 U1" d="M0 3 0 5 4 5 4 4M4.34 4.34 4 4 3.66 4.34"/>
+          <path data-arrow="9,3 D2 R2 U4 L3 D5 L3 D1 R1" d="M9 3 9 5 11 5 11 1 8 1 8 6 5 6 5 7 6 7M5.66 7.34 6 7 5.66 6.66"/>
+          <path data-arrow="3,8 L1 U1 R1" d="M3 8 2 8 2 7 3 7M2.66 7.34 3 7 2.66 6.66"/>
+          <path data-arrow="3,2 L3 U1" d="M3 2 0 2 0 1M0.34 1.34 0 1 -0.34 1.34"/>
+          <path data-arrow="3,1 L2 U1 R2" d="M3 1 1 1 1 0 3 0M2.66 0.34 3 0 2.66 -0.34"/>
+          <path data-arrow="9,2 R1" d="M9 2 10 2M9.66 2.34 10 2 9.66 1.66"/>
+          <path data-arrow="3,3 D1 L2" d="M3 3 3 4 1 4M1.34 3.66 1 4 1.34 4.34"/>
+          <path data-arrow="3,6 L2" d="M3 6 1 6M1.34 5.66 1 6 1.34 6.34"/>
+          <path data-arrow="6,10 L1" d="M6 10 5 10M5.34 9.66 5 10 5.34 10.34"/>
+          <path data-arrow="5,8 R1" d="M5 8 6 8M5.66 8.34 6 8 5.66 7.66"/>
+          <path data-arrow="6,5 U4" d="M6 5 6 1M6.34 1.34 6 1 5.66 1.34"/>
+          <path data-arrow="10,4 U1" d="M10 4 10 3M10.34 3.34 10 3 9.66 3.34"/>
+          <path data-arrow="1,3 R1" d="M1 3 2 3M1.66 3.34 2 3 1.66 2.66"/>
+        </svg>
+        <div class="board-controls" hidden>
+          <p class="board-prompt">Go ahead, try it out</p>
+          <p class="board-status visually-hidden" role="status"></p>
+          <button class="icon-button" type="button" aria-label="Restart" title="Restart" data-restart><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.6 9a8 8 0 1 1-.2 5.5M4.5 4v5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="icon-button" type="button" aria-label="Autoplay" title="Autoplay" data-autoplay><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path class="play-icon" d="M8 6v12l10-6z"/><path class="stop-icon" d="M7 7h10v10H7z"/></svg></button>
+        </div>
+      </div>
+     </div>
+    </div>
+    <section class="game-section" aria-labelledby="ranks-title">
+      <h2 id="ranks-title">Classic Arrow Maze Reimagined</h2>
+      <p>You know the idea: an arrow flies the way it points, as long as its path is clear. Here the mazes are cats, lighthouses, and teapots, and every arrow you free plays a note. 100 levels take you from Easy to Basically Impossible, and then it keeps going.</p>
+      <ul class="rank-list">
+        <li><a class="shot" href="../assets/games/arrow-strum/easy-heart-large.webp"><img class="screen" src="../assets/games/arrow-strum/easy-heart.webp" width="400" height="869" loading="lazy" alt="An Easy board in the shape of a heart."><span>Easy</span></a></li>
+        <li><a class="shot" href="../assets/games/arrow-strum/medium-duck-large.webp"><img class="screen" src="../assets/games/arrow-strum/medium-duck.webp" width="400" height="869" loading="lazy" alt="A Medium board in the shape of a duck."><span>Medium</span></a></li>
+        <li><a class="shot" href="../assets/games/arrow-strum/hard-octopus-large.webp"><img class="screen" src="../assets/games/arrow-strum/hard-octopus.webp" width="400" height="869" loading="lazy" alt="A Hard board in the shape of an octopus."><span>Hard</span></a></li>
+        <li><a class="shot" href="../assets/games/arrow-strum/very-hard-snowman-large.webp"><img class="screen" src="../assets/games/arrow-strum/very-hard-snowman.webp" width="400" height="869" loading="lazy" alt="A Very Hard board in the shape of a snowman."><span>Very Hard</span></a></li>
+        <li><a class="shot" href="../assets/games/arrow-strum/ultra-hard-guitar-large.webp"><img class="screen" src="../assets/games/arrow-strum/ultra-hard-guitar.webp" width="400" height="869" loading="lazy" alt="An Ultra Hard board in the shape of a guitar."><span>Ultra Hard</span></a></li>
+        <li><a class="shot" href="../assets/games/arrow-strum/impossible-ghost-large.webp"><img class="screen" src="../assets/games/arrow-strum/impossible-ghost.webp" width="400" height="869" loading="lazy" alt="A Basically Impossible board in the shape of a ghost."><span>Basically Impossible</span></a></li>
+      </ul>
+    </section>
+    <div class="game-section game-split">
+      <div>
+        <section aria-labelledby="music-title">
+          <h2 id="music-title">Unwind One Note at a Time</h2>
+          <p>Take a breath, find the next arrow, and let it ring. Short ones sing high, long ones hum low, and a tune unfolds as the maze drifts away.</p>
+          <p>Track achievements, or not, it’s up to you!</p>
+        </section>
+        <section aria-labelledby="way-title">
+          <h2 id="way-title">Ultimate Relax Modes</h2>
+          <p>Hints and musical autoplay modes make this game even more chill and less stress.</p>
+        </section>
+      </div>
+      <div class="screen-pair">
+        <a class="shot" href="../assets/games/arrow-strum/cleared-large.webp"><img class="screen" src="../assets/games/arrow-strum/cleared.webp" width="520" height="1131" loading="lazy" alt="The Perfect screen after clearing level 58."></a>
+        <a class="shot" href="../assets/games/arrow-strum/achievements-large.webp"><img class="screen" src="../assets/games/arrow-strum/achievements.webp" width="520" height="1131" loading="lazy" alt="The Achievements screen, with 6 of 22 unlocked."></a>
+      </div>
+    </div>
+    <p class="game-section game-links"><a href="support/">Arrow Strum support</a> <a href="privacy/">Privacy policy</a></p>
+    <dialog class="viewer" aria-label="Screenshot viewer">
+      <img alt="" width="960" height="2087">
+      <p class="viewer-caption"></p>
+      <button class="viewer-button viewer-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="viewer-button viewer-previous" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="viewer-button viewer-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </dialog>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-rule" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <a href="../" class="footer-copyright">© Help Yourself</a>
+      <nav aria-label="Footer navigation"><a href="mailto:support@helpyourself.games">Contact</a><a href="../privacy/">Privacy</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
