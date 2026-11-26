@@ -243,3 +243,10 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* App Store download and scannable code on the game hero. */
+.app-download { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.app-store-qr { margin: 0; text-align: center; }
+.app-store-qr a { display: block; width: 144px; background: #fff; }
+.app-store-qr img { display: block; width: 144px; height: 144px; }
+.app-store-qr figcaption { margin-top: 8px; font-size: 14px; }
